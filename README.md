@@ -15,7 +15,7 @@ _You have **three hours** to complete this challenge. Plan your time accordingly
 
 You will notice there are several JavaScript files being brought into the index.html file.  Each of those files contain JavaScript problems you need to solve.  If you get stuck on something, skip over it and come back to it later.
 
-In meeting the minimum viable product (MVP) specifications listed below, you should have a console full of correct responses to the problems given.
+In meeting the minimum viable product (MVP) specifications listed below, you should have a console full of correct responses to the problems given.. 
 
 ### Commits
 
