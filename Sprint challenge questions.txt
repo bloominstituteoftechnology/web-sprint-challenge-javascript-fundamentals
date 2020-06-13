@@ -1,0 +1,26 @@
+﻿Sprint challenge questions
+
+
+Briefly compare and contrast .forEach & .map (2-3 sentences 
+        max).
+Answers: Both are javascript methods that iterate through Arrays. Both don’t mutate the arrays on which it called.
+But Foreach return value is undefined and map returns a new array.
+
+
+Explain the difference between a callback and a higher order function.
+Answer: A callback function is a function that is passed as an argument to another function. A higher order function is a function that receives a function as a parameter.
+
+
+What is closure?
+Answers:The ability for a inner or child function to have access to its parent function or outer functions scope.
+
+
+Describe the four rules of the 'this' keyword.
+1. Window or Global binding.
+2. Implicit Binding.
+3. Explicit binding.
+4. New binding.
+
+
+Why do we need super() in an extended class?
+Answer: In a child class, you use super() to call its parent’s constructor and super.methodName to access its parent’s methods.
