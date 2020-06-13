@@ -16,7 +16,9 @@ function CuboidMaker(length, width, height) {
   
   Formula for cuboid volume: length * width * height
 */
-const newCuboid = new CuboidMaker (10 * 20 * 10);
+const newCuboid = new CuboidMaker({
+  
+})
 
 /* == Step 3: Surface Area Method ==
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
