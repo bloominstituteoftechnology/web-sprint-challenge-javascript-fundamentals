@@ -23,8 +23,8 @@ string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aur
 
 */
 const displayNames = [];
-zooAnimals.forEach((data) => {
-  return displayNames.push(`Name ${data.animal_name} Scientific ${data.scientific_name}`);
+zooAnimals.forEach( function (data){
+  displayNames.push(`Name ${data.animal_name} Scientific ${data.scientific_name}`)
 })
 console.log(displayNames);
 
@@ -45,7 +45,7 @@ console.log(lowCaseAnimalNames);
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array
- of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
+of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
 const lowPopulationAnimals = zooAnimals.filter((data) => {
@@ -60,7 +60,10 @@ Find the total population from all the zoos using the .reduce() method.
 Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-let populationTotal = 0;
+//let populationTotal = 0;
+const populationTotal = zooAnimals.reduce((calback, total) => {
+  return total += zooAnimals.population;
+}, 0);
 console.log(populationTotal);
 
 
@@ -72,6 +75,9 @@ console.log(populationTotal);
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function consume(a,  b, cb){
+  return cb(a, b);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
