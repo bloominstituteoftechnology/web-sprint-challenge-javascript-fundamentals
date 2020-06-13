@@ -17,13 +17,17 @@ function CuboidMaker(length, width, height) {
   Formula for cuboid volume: length * width * height
 */
 
-const cuboid = {
-  length: 0,
-   width: 0,
-   height: 0,
-}
+// const cuboid = {
+//   length: 0,
+//    width: 0,
+//    height: 0,
+// }
 
-CuboidMaker.volume = function() {
+// cuboid.volume = function() {
+//   return (`${this.length} * ${this.width} * ${this.height}`)
+// }; 
+
+CuboidMaker.prototype.volume = function() {
   return (`${this.length} * ${this.width} * ${this.height}`)
 }; 
   // return (length * width * height)}
@@ -36,9 +40,9 @@ CuboidMaker.volume = function() {
   Formula for cuboid surface area of a cube: 2 * (length * width + length * height + width * height)
 */
 
-cuboid.surfaceArea = function() {
+CuboidMaker.prototype.surfaceArea = function() {
   return (2 * (`${this.length} * ${this.width} * ${this.length} * ${this.height} * ${this.width} * ${this.height}`))
-}
+};
 
 
 /* == Step 4: Create a new object that uses CuboidMaker ==
