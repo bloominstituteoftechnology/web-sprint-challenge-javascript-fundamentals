@@ -17,8 +17,19 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
+// Is a nest function which calls on the parent function, and the partent function is able to call on the global variable.
 
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+function sumation(array) {
+  let max = Math.max(array[0], array[1]);
+  let min = Math.min(array[0], array[1]);
+  let placeHolder = 0;
+  for (let i = min; i <= max; i++) {
+    placeHolder += i;
+  }
+  return placeHolder;
+}
+console.log(sumation([1, 4]));
