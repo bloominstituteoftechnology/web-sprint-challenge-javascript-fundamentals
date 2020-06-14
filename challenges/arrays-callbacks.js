@@ -98,4 +98,3 @@ const consume = (array, bindex, cb){
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
-
