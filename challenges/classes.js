@@ -1,9 +1,9 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
 class CuboibMaker{
-    constructor(dimensions){
-      this.length =dimensions.length;
-      this.width = dimensions.width;
-      this.height = dimensions.height;
+    constructor(measurements){
+      this.length =measurements.length;
+      this.width = measurements.width;
+      this.height = measurements.height;
     }
   
     volume() {
