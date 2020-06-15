@@ -43,10 +43,16 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter((population) => {
-    return zooAnimals.population < 5;
+const lowPopulationAnimals = zooAnimals.filter((arr) => {
+    return zooAnimals.population <= 5;
 });
 console.log(lowPopulationAnimals);
+
+// let lowPopulationAnimals = []
+
+// function filterPopulation () {
+//   return 
+// }
 
 /* Request 4: .reduce() 
 
@@ -105,7 +111,7 @@ function greeting(a, b) {
 
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
-console.log(consume(`Sarah`, `Mucho`, greeting)); // Hello Mary Poppins, nice to meet you!
+// console.log(consume([Sarah, Mucho, greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 /*
