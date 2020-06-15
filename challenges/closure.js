@@ -30,4 +30,21 @@ function summation () {
  return counter + 1 + 2 + 3 + 4; 
 }
 
+// function summation() {
+//    let count = 0;
+//    return function() {
+//      count = count + 1;
+//      return count;
+//    }
+// }
+
+// const summation = () => {
+//   let count = 0;
+//   return function() {
+//     const = count += 1;
+//     return count;
+//   }
+// };
+ 
+
 console.log(summation(4));
