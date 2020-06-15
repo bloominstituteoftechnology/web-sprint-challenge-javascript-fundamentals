@@ -44,7 +44,7 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = zooAnimals.filter((population) => {
-    return zooAnimals.population <= 5;
+    return zooAnimals.population < 5;
 });
 console.log(lowPopulationAnimals);
 
@@ -54,7 +54,7 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 // let populationTotal = 0;
-const populationTotal = zooAnimals.reduce((callback, total) => {
+const populationTotal = zooAnimals.reduce((total, population) => {
   return total += zooAnimals.population;
 }, 0);
 console.log(populationTotal);
@@ -67,50 +67,45 @@ console.log(populationTotal);
   * The first two parameters can take any argument (we can pass any value as argument)
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
-  * 
-
-
-
+ 
+ 
   /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
-*/
 
-function consume(a, b, cb) {
-  cb(a, b);
-}
-
-
-function add() {
-  return consume
-}
-
-function multiply() {
-
-}
-multiply(a * b (callback) => {
-
-})
-
-function gretting() {
-
-}
-
-add(a + b (callback) => {
-
-})
-
-
-
-// greeting
+greeting
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
+
+
+function consume(a, b, cb) {
+ cb(a, b);
+}
+
+function add(a, b) {
+  console.log(a + b);
+}
+
+function multiply(a, b) {
+  console.log(a * b);
+
+}
+
+function greeting(a, b) {
+  
+  this.firstName = a.firstName,
+  this.lastName = b.lastName,
+
+  console.log(`Hello ${a.firstName} ${b.lastName}, nice to meet you`); {
+  }
+}
+
+// add(a + b (cb) => {
+
+console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
-
-
+console.log(consume("Sarah", "Mucho", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 /*
@@ -119,11 +114,5 @@ Stretch: If you haven't already, convert your array method callbacks into arrow 
 
 */
 
-// function consume(a, b (cb)) {
-//   console.log(cb); 
-// }
 
-// const consume = function(a, b, cb) {
-//   cb(a, b);
-// };
 
