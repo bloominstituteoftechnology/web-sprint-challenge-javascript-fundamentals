@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-
+// It is because, each function has the ability to reach outward of itself to obtain variables.
 
 /* Task 2: Counter */
 

@@ -26,14 +26,21 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+.map is a higher-level function that takes 2 arguments.
+.dorEach is a iterator function.
 
 2. Explain the difference between a callback and a higher order function.
-
+a  callback lives within the higher order code.
 3. What is closure?
-
+A function in its lexical enviornment. Supplied with necessary memories or syntax to function.
 4. Describe the four rules of the 'this' keyword.
-
+-global scope- provided to us essentially. the this creation.
+-implicit binding- whenever a function is called by a preceding dot, the object left of the dot gets 'this'
+-explicit binding- requires specifically passing argument as the 'this'
+ keyword in any given function using 'call', 'apply' or 'bind'.
+ -new binding- using the 'new' keyword creates a new object, that 'this' will reference.
 5. Why do we need super() in an extended class?
+-It allows us to inherit parent attributes.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
