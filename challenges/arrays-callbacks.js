@@ -94,10 +94,10 @@ function multiply(a, b) {
 
 function greeting(a, b) {
   
-  this.firstName = a.firstName,
-  this.lastName = b.lastName,
+  this.firstName = [a].firstName,
+  this.lastName = [b].lastName,
 
-  console.log(`Hello ${a.firstName} ${b.lastName}, nice to meet you`); {
+  console.log(`Hello ${[a].firstName} ${[b].lastName} nice to meet you`); {
   }
 }
 
@@ -105,7 +105,7 @@ function greeting(a, b) {
 
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
-console.log(consume("Sarah", "Mucho", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(`Sarah`, `Mucho`, greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 /*
