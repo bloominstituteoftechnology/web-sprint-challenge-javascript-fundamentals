@@ -16,7 +16,7 @@ function myFunction() {
 }
 myFunction();
 
- Explanation: Because the child func "nested", can access the the parent func "My function".
+ Explanation: Because the child func "nested", can access the the parent func "My function". Function are not just function but are closures; the function body has access to variables that are define outside the function scope.
 
 
 /* Task 2: Counter */
