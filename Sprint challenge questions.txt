@@ -1,10 +1,10 @@
 ﻿Sprint challenge questions
 
 
-Briefly compare and contrast .forEach & .map (2-3 sentences 
-        max).
+Briefly compare and contrast .forEach & .map (2-3 sentences  max).
+       
 Answers: Both are javascript methods that iterate through Arrays. Both don’t mutate the arrays on which it called.
-But Foreach return value is undefined and map returns a new array.
+But Foreach  doesnt return value or array.And map returns a new array and doesnt mutate the array. Foreach will mutate the orginal array.
 
 
 Explain the difference between a callback and a higher order function.
@@ -17,9 +17,16 @@ Answers:The ability for a inner or child function to have access to its parent f
 
 Describe the four rules of the 'this' keyword.
 1. Window or Global binding.
+Answer: when we are using .call, .apply, .bind or new, keywords javascript is defaulting this to reference the window object.
+
 2. Implicit Binding.
+Answer: Implicit binding occurs when dot notation is used to invoke a function.
+
 3. Explicit binding.
+Answer: Explicit binding of this occurs when .call(), apply(), or bind() are used on a function. They are Explicit because you are explicitly passing in this context to call() or apply().
+
 4. New binding.
+Answer: When ever you invoke a function with  the new keyword, javascript will create a new object and call it new. 
 
 
 Why do we need super() in an extended class?

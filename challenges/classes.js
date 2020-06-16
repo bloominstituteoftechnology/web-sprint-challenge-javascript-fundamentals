@@ -21,11 +21,9 @@ class CuboibMaker{
     width: 5,
     height: 5
   });
-  
+ 
   console.log(cuboid.volume());//100
   console.log(cuboid.surfacearea());//130
-
-
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
