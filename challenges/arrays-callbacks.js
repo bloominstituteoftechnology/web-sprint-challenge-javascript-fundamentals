@@ -43,12 +43,13 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
+
 const lowPopulationAnimals = zooAnimals.filter((arr) => {
-    return zooAnimals.population <= 5;
+    return arr.population <= 5;
 });
 console.log(lowPopulationAnimals);
 
-// let lowPopulationAnimals = []
+// 
 
 // function filterPopulation () {
 //   return 
@@ -59,11 +60,18 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-// let populationTotal = 0;
-const populationTotal = zooAnimals.reduce((total, population) => {
-  return total += zooAnimals.population;
+let populationTotal = 0;
+populationTotal = zooAnimals.reduce((total, number) => {
+  return total + number.population;
 }, 0);
 console.log(populationTotal);
+
+// const populationTotal = zooAnimals.reduce((total, population) => {
+//   total.push(total += population);
+//   return total;
+// });
+
+// console.log(populationTotal);
 
 
 // ==== Callbacks ====  
@@ -107,13 +115,10 @@ function greeting(firstName, lastName) {
   }
 }
 
-// add(a + b (cb) => {
-
 console.log(consume(2, 2, add)); // 4
 console.log(consume(10, 16, multiply)); // 160
-// console.log(consume(greeting)); // Hello Mary Poppins, nice to meet you!
 
-console.log(greeting(`Sarah`, `Mucho`));
+console.log(consume("Sarah", "Mucho", greeting));
 
 
 /*
