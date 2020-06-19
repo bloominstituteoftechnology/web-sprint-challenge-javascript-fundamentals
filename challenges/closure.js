@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-
+because it is still inside of the parent conatiner
 
 /* Task 2: Counter */
 
