@@ -17,8 +17,11 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-
+// Functions can look OUTSIDE of themselves for context (variables, etc) but not INSIDE for them. 
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+function summation(param){
+  
+}
