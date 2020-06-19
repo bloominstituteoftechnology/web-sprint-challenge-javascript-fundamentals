@@ -90,12 +90,10 @@ function greeting(a,b)
  console.log(consume(10, 16, multiply)); // 160
  console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
-
-
-
 /*
 
 Stretch: If you haven't already, convert your array method callbacks into arrow functions.
 
 */
-
+//const consume [a, b];
+//console.log(consume.map(consu => consu.legth))

@@ -30,16 +30,10 @@ return 2 * (this.length * this.width + this.length * this.height + this.width * 
 }
 /* == Step 4: Create a new object that uses CuboidMaker ==
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
-  Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
-*/
-/*function cuboid (length, width, height){
-  CuboidMaker.call(this, length, width, height);
-  Cuboid.prototype =Object.create(CuboidMaker.prototype);
-  this.lenght = 4;
-  this.width = 5;
-  this.height = 5;
-}*/
+  Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   */
+
 cuboid = new CuboidMaker(4,5,5);
+
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 console.log(cuboid.volume()); // 100
 console.log(cuboid.surfaceArea()); // 130
