@@ -22,7 +22,9 @@ const zooAnimals = [
 
 /* Request 1: .forEach()
 
-The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+The zoos want to display both the scientific name and the 
+animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. 
+displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
 const displayNames = [];
@@ -52,7 +54,7 @@ const lowPopulationAnimals = zooAnimals.filter((el) => {
 		return el;
 	}
 });
-// console.log(lowPopulationAnimals);
+console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
 
@@ -60,6 +62,15 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 
+let populations = zooAnimals.map((el) => {
+	return el.population;
+});
+
+let totalPopulation = populations.reduce((total, cv) => {
+	return total + cv;
+});
+
+// console.log(totalPopulation);
 // ==== Callbacks ====
 
 /* Step 1: Create a higher-order function
