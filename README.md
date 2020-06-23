@@ -26,9 +26,9 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+.map returns a new array so I usually use push when using .forEach since .forEach doesnt actually return anything.
 2. Explain the difference between a callback and a higher order function.
-
+A higher order fuction is a function inside of an function and a callback is passed as a parameter.
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
