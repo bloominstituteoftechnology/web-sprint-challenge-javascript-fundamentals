@@ -27,13 +27,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+- .map does not change the array it's called on, it returns a new array with the same number of items having done what the callback function inside the map asked it to. .foreach executes once for each element in the array, but doesn't return a new array. 
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher-order function is one that takes another function as (at least) one of its parameters. A callback function is once that is passed to the other function (making the recipient a higher order function) and the expectation is the higher order function will "call back" that function to do something
+
 
 3. What is closure?
 
+Closure is the combination of a JS function along with the "lexical environment" that is how access to. In short, a closure can access the out function's scope when defined inside one. 
+
 4. Describe the four rules of the 'this' keyword.
 
+  i. In global scope, this refers to the window/console object. Not really very useful most of the time. 
+  ii. With dot notation, this refers to the object before the dot... with the function following the dot.
+  iii. when we create a "constructor function" the builds us new objects, this refers to the object that funciton returns to us... so-called implicit binding\
+  iv. when we want to bind explicitly, we can use call or apply to take whatever object we want and make it "this"
+
 5. Why do we need super() in an extended class?
+
+We need super to bind our extended class to the parent class. This will give the child access to the parent constructor's attribute and make the extended class one of it.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -47,8 +61,8 @@ You are expected to be able to answer questions in these areas. Your responses c
 - [x] Add your team lead as collaborator on Github
 - [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
 - [x] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
