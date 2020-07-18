@@ -26,15 +26,20 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+.forEach goes through each index or object in an array. 
+.map creates a new array from an already existing one.
 2. Explain the difference between a callback and a higher order function.
-
+Higher-order functions is when a function takes another function(s) as an argument(s), and/or returns a function to its callers. 
+A callback function is a function is passed to another function with the expectation that the other function will call it.
 3. What is closure?
-
+A closure is a function that has another function(s) inside with references to its surrounding state (the lexical environment). Basically a closure gives you access to the parent functions scope from the childs function and can keep going.
 4. Describe the four rules of the 'this' keyword.
-
+    1. Encapsulation - I like to think of this word as enclosing. Like hiding something, encapsulation hides an objexts methods and properties within itself. So they are not exposed.
+    2. Abstraction - When looking at an iPhone, all we see is the screen, buttons, camera/flashlight and charging port. What you dont see is the complex chips inside and how it works. Thats what Abstraction is, hiding the complex details and showing the sinple ones. It helps make the code readable.
+    3. Inheritance - Inheritance allows the parent class to pass functionality to a child class. If we have a "Turn on" function to turn on an iPhone 7, we can then extend that function with an iPhone 8.
+    4. Polymorphism - This is a way of having multiple forms. In this case, it means we can use the same method on different objects. If the iPhone 7 and iPhone 8 has the same function we can use the same method, Polymorphism allows us to use the same method on different objects.
 5. Why do we need super() in an extended class?
-
+super() refer to the parent class. It is used to call the constructor of the parent class. To also access the parents properties and methods.
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
