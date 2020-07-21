@@ -21,16 +21,15 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+zooAnimals.forEach(zooAnimals => displayNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}`))
 console.log(displayNames);
-zooAnimals.forEach(element => displayNames.push(`Name: ${zooAnimals.animal_name}, Scientific: ${zooAnimals.scientific_name}`))
-
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
 
-const lowCaseAnimalNames = zooAnimals.map(zooAnimals.animal_name.tolowercase())
+const lowCaseAnimalNames = zooAnimals.map((zooAnimals) => zooAnimals.animal_name.toLocaleLowerCase())
 console.log(lowCaseAnimalNames);
 
 
@@ -39,7 +38,7 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter(zooAnimals.population > 5)
+const lowPopulationAnimals = zooAnimals.filter((zooAnimals) => zooAnimals.population < 5)
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -47,8 +46,7 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-let populationTotal = 0;
-zooAnimals.reduce((zooAnimals.population, populationTotal) => zooAnimals.population + populationTotal)
+const populationTotal = zooAnimals.reduce((accumulator, zooAnimals) => {return accumulator + zooAnimals.population}, 0)
 console.log(populationTotal);
 
 
@@ -61,7 +59,7 @@ console.log(populationTotal);
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 function consume (a, b, cb){
-  cb (a,b);
+   return cb (a,b);
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -73,18 +71,18 @@ function add (x, y){
   return x + y;
 }
 
-function multiply (z, v){
-  return z * v;
+function multiply (a, b){
+  return a * b;
 }
 
-function greeting (f_n, l_n){
-  return `Hello ${f_n} ${l_n}, nice to meet you!`
+function greeting (a, b){
+  return `Hello ${a} ${b}, nice to meet you!`
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
  console.log(consume(2, 2, add)); // 4
  console.log(consume(10, 16, multiply)); // 160
- console.log(consume("Mary", "Poppins", greeting));  Hello Mary Poppins, nice to meet you!
+ console.log(consume("Mary", "Poppins", greeting));  //Hello Mary Poppins, nice to meet you!
 
 
 
