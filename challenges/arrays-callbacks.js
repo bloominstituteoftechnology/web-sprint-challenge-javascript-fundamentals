@@ -1,4 +1,5 @@
 // ==== ADVANCED Array Methods ====
+console.log ("__________________________________________ARRAYS AND CALLBACKS________________________")
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 

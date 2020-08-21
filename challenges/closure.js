@@ -1,7 +1,7 @@
 // ==== Closures ==== 
-
+console.log ("__________________________________________CLOSURES________________________")
 /* Task 1: Study the code below and explain in your own words why nested function can access the variable internal. */
-
+// 
 
 const external = "I'm outside the function";
 
@@ -17,8 +17,17 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-
+//It can access internal because it is part of the `myFunction` function, const internal, would not be available to any other function ouside of `myFunction
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+
+
+function sumation(n) {
+  const summit = (n) = (n * (n + 1)) / 2;
+  return summit;
+}
+
+console.log(sumation(10));
