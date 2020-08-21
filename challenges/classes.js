@@ -8,7 +8,7 @@ constructor(length, width, height) {
   }
   
   volume(){
-    return `${this.length * this.width * this.height};
+    return `${this.length * this.width * this.height}`;
   }
   
   surfacearea(){
