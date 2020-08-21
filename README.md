@@ -26,13 +26,17 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+    For each will loop and retrive what it was asked for, HOWEVER, unless you PUSH into previously stated array will do nothing.
+    Map is super handy because it will loop over and find what you asked it to pushing into its own array without modifying original data.
 
 2. Explain the difference between a callback and a higher order function.
+    A higher order fuction takes another function as an argument and returns a fuction when called upon.
+    a CBfunction is a function passed to another function with the expectation that the other function will call it.
 
 3. What is closure?
-
+    closures give us the ability to put functions together. The ability to access functions from a parent level scope in child level scope even after the parent function has been terminated. 
 4. Describe the four rules of the 'this' keyword.
-
+    
 5. Why do we need super() in an extended class?
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
@@ -62,7 +66,7 @@ Test your knowledge of advanced array methods and callbacks.
 #### Task B: Closure
 
 This challenge takes a look at closures as well as scope. 
-* [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
+* [X] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
 
 #### Task C: Prototypes
 
