@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-Because we are console.log'ing it inside the function and then initializing it after, but we have not ended/initalized the parent function yet. 
+Because we are console.loging it inside the function and then initializing it after, but we have not ended/initalized the parent function yet. 
 
 /* Task 2: Counter */
 
