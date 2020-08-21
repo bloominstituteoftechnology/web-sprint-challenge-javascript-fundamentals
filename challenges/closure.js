@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-//It's a nested function so it can access variables from the first function.
+//It's a nested function so it can access variables from the higher order function.
 
 /* Task 2: Counter */
 
