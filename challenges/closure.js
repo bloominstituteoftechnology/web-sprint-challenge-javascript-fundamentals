@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-Because we are console.loging it inside the function and then initializing it after, but we have not ended/initalized the parent function yet. 
+Because it is nested, and nested functions have access to outer variable and can be used other places. 
 
 /* Task 2: Counter */
 
