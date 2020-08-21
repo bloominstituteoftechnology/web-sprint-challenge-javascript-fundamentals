@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-Because it is nested, and nested functions have access to outer variable and can be used other places. 
+//Because it is nested, and nested functions have access to outer variable and can be used other places. 
 
 /* Task 2: Counter */
 
