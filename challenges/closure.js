@@ -18,7 +18,14 @@ myFunction();
 
 // Explanation: 
 
+//This is a typical example of closure in that the nested function body has access to the outside scope and searches for 'internal' outside of itself as it is not yet defined within it's own scope.
+
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function summation(x){
+  const newCounter = counter();
+  return newCounter;
+}
