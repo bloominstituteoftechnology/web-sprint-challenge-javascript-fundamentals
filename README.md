@@ -36,8 +36,12 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 3. What is closure?
     closures give us the ability to put functions together. The ability to access functions from a parent level scope in child level scope even after the parent function has been terminated. 
 4. Describe the four rules of the 'this' keyword.
-    
+    simple function call- global object in non-strict mode (a big nono, can brake browser) and undefined in strict mode
+    implicit binding- this points to the left of the object
+    Explicit Binding- we thell javascript to set this to point to a certain value with call,apply or bind
+    new binding- constructs a new object and this points to it.
 5. Why do we need super() in an extended class?
+    when using super, it refers to the parten class and calls on the constructor of the parent so we can access the parents properties and methods.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
