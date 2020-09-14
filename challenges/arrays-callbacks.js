@@ -70,7 +70,9 @@ console.log(zooAnimals.reduce(animalNumbers, populationTotal));
  * The consume function should return the invocation of cb, passing a and b into cb as arguments
  */
 function consume(a, b, cb) {
-
+    function cb(a, b) {
+        return cb;
+    }
 }
 
 /* Step 2: Create several functions to callback with consume();
@@ -86,10 +88,10 @@ multiply(num1, num2) {
     return num1 * num2;
 }
 
-greeting() {
-    return `Hello ${first-name} ${last-name}, nice to meet you!`;
+greeting(firstName, lastName) {
+    return "Hello " +
+        firstName + lastName + ", nice to meet you!";
 }
-
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 console.log(consume(2, 2, add)); // 4
