@@ -55,9 +55,16 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-// let populationTotal = 0;
-// console.log(populationTotal);
+const reducer = (accumulator, currentValue) => accumulator + currentValue.population;
+let populationTotal = 0;
+console.log(zooAnimals.reduce(reducer, 0));
 
+//////////////////////
+
+// Use .reduce to combine all the items in an array together
+// const nums = [1, 2, 3, 4];
+// const reducer = (accumulator, currentValue) => accumulator + currentValue;
+// console.log(nums.reduce(reducer, 5)); // (5 + 1 + 2 + 3 + 4) === 15
 
 // ==== Callbacks ====  
 
