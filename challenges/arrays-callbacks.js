@@ -82,14 +82,14 @@ function consume(x, y, callback){
   return callback(x, y)
 }
 
-const add = function(x, y, callback){
+function add(x, y){
   return x + y;
 }
 
-const multiply =function (x, y, callback){
+function multiply(x, y){
   return x * y;
 }
-const greeting =function (x, y, callback){
+function greeting(x, y){
   `Hello ${x} ${y}, nice to meet you!`
 }
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
