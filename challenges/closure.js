@@ -33,4 +33,4 @@ function summation(param){
   return sum;
 }
 
-console.log(summation(4));
+console.log("8. Closure - Counter:", summation(4));

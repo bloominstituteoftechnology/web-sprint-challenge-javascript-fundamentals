@@ -26,7 +26,7 @@ zooAnimals.forEach(function(items){
   displayNames.push("Names:", items.animal_name, "Scientific:", items.scientific_name);
 });
 
-console.log("1. Name:", displayNames, "Scientific:");
+console.log("1.", displayNames);
 
 /* Request 2: .map()
 
@@ -92,9 +92,9 @@ function greeting (firstName,lastName){
 }
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-console.log(consume(2, 2, add)); // 4
-console.log(consume(10, 16, multiply)); // 160
-console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log("5. Callbacks 1.", consume(2, 2, add)); // 4
+console.log("6. Callbacks 2.", consume(10, 16, multiply)); // 160
+console.log("7. Callbacks 3.", consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 /*
 

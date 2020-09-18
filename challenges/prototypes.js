@@ -46,7 +46,7 @@ function cuboid(cuboidAttrs) {
 const Cuboid = new CuboidMaker(4, 5, 5);
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
-console.log(Cuboid.volume()); // 100
-console.log(Cuboid.surfaceArea()); // 130
+console.log("9. Prototypes - Volume:", Cuboid.volume()); // 100
+console.log("10. Prototypes - SurfaceArea:", Cuboid.surfaceArea()); // 130
 
 
