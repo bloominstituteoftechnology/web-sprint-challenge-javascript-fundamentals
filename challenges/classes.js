@@ -14,10 +14,15 @@ class CuboidMaker{
 }
 
 class Child extends CuboidMaker{
-    constructor(parameter){
-        super(parameter)
+    constructor(childAttributes){
+        super(childAttributes);
     }
 }
+const cuboid = new Child({
+    length: 4,
+    width: 5,
+    height: 5
+    });
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
 // console.log(cuboid.volume()); // 100
@@ -27,15 +32,3 @@ class Child extends CuboidMaker{
   
 
  
-  function Child(length, width, height){
-    CuboidMaker.call(this, parameter);
-  }
-  Child.prototype = Object.create(CuboidMaker.prototype);
-  
-  const childOne = new CuboidMaker({
-    length: 4, 
-    width: 5, 
-    height: 5
-  });
-  
-  
