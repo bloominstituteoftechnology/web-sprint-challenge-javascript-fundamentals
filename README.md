@@ -26,15 +26,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+_both .forEach and .map iterate through an array using a function as their argument, but .map is used to convert data and return a brand new array.  forEach can be a little more versatile, but it doesn't return a new array.  forEach also doesnt require a return statement._
 2. Explain the difference between a callback and a higher order function.
-
+_Higher order functions are functions that take other functions as arguments, the functions that are passed into these higher order functions to be called later are callback functions_
 3. What is closure?
-
+_closure is used when a function or a nested function utilizes information from its surrounding area (lexical environment).  I.e. a function (f1) is nested in another function f(2).  Since f1 is inside of f2, you may arrange it so that it requires information in the scope of f1 (outer function).  F2 reaching outside of its own space into its lexical environment for data is an example of closure._
 4. Describe the four rules of the 'this' keyword.
-
+_in the global scope, this will be the window/console object. this often follows a ., and the object of this can be determined by looking to whats left of the dot.  When we use a constructor, this refers to the instance created by the constructor. Lastly, call and apply explicitly define this_
 5. Why do we need super() in an extended class?
-
+_super is necessary to let the parent constructor know that the child's attributes are relevant.  It passes attributes back up to the parent to be assessed_
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
