@@ -18,7 +18,19 @@ myFunction();
 
 // Explanation: 
 
+/* This is an example of a closure. Nested functions can access variables outside the function. Similar to how 
+functions can access global variables. Since 'internal' is declared in 'myFunction', 'nestedFunction' has access to 
+that variable. The scope of 'internalFunction' can actually reach the variable 'external'.*/
 
 /* Task 2: Counter */
+function summation(integer){
+  var sum = 0;
+  for(let i = 0; i < integer + 1; i++){
+    sum = sum + i;
+  }
+  return sum;
+}
 
-/* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+summation(4);
+/* Create a function called `summation` that accepts a parameter and uses a counter to 
+return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */

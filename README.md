@@ -27,13 +27,25 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+    .forEach is an array mehtod that uses loop logic. With that in mind, you have to manually .push
+    each argument into a new array, whereas in .map it automatically creates a new array for you and has
+    the similar functionalities as the .filter method.
+
 2. Explain the difference between a callback and a higher order function.
+
+    callbacks pass functions whereas higher order functions take functions as parameters.
 
 3. What is closure?
 
+    Basically a nested function having the ability to use variables outside of itself.
+
 4. Describe the four rules of the 'this' keyword.
 
+    this is a tag that can be used implicitly refer to something (functions or objects)
+
 5. Why do we need super() in an extended class?
+
+    super is the syntax that allows sub-classing 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
