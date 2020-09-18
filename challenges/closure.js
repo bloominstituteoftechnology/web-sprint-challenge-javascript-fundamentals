@@ -26,9 +26,11 @@ myFunction();
 
 
 function summation(param){
-  let param = 4;
-  return ++param;
+  let sum = 0;
+  for(let i = 1; i <= param; i++){
+    sum = sum + i
+  }
+  return sum;
 }
 
-const newCounter = summation();
-console.log(newCounter());
+console.log(summation(4));
