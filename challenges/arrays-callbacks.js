@@ -59,13 +59,6 @@ const reducer = (accumulator, currentValue) => accumulator + currentValue.popula
 let populationTotal = 0;
 console.log(zooAnimals.reduce(reducer, 0));
 
-//////////////////////
-
-// Use .reduce to combine all the items in an array together
-// const nums = [1, 2, 3, 4];
-// const reducer = (accumulator, currentValue) => accumulator + currentValue;
-// console.log(nums.reduce(reducer, 5)); // (5 + 1 + 2 + 3 + 4) === 15
-
 // ==== Callbacks ====  
 
 /* Step 1: Create a higher-order function
