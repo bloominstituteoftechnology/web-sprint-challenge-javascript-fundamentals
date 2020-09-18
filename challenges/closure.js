@@ -18,7 +18,17 @@ myFunction();
 
 // Explanation: 
 
+// "nestedFunction();" can access the variable "internal" through the declared "myFunction()"; basically asking "myFunction()" for access to the variable "internal".
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+
+function summation(param){
+  let param = 4;
+  return ++param;
+}
+
+const newCounter = summation();
+console.log(newCounter());
