@@ -10,6 +10,7 @@ function myFunction() {
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
+    const internal = "goodbye";
     console.log(internal);
   };
   nestedFunction();
