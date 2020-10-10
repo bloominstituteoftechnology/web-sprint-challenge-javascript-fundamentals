@@ -56,12 +56,12 @@ Your finished project must include all of the following requirements:
 #### Task A: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
-* [ ] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started.  Read the instructions carefully!
+* [x] Use the [arrays-callbacks.js](challenges/arrays-callbacks.js) link to get started.  Read the instructions carefully!
 
 #### Task B: Closure
 
 This challenge takes a look at closures as well as scope. 
-* [ ] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
+* [x] Use the [closure.js](challenges/closure.js) link to get started. Read the instructions carefully!
 
 #### Task C: Prototypes
 
