@@ -2,7 +2,7 @@
 
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
-const zooAnimals = [
+const data = [
   { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
   { animal_name: "Screamer, southern", population: 1, scientific_name: "Chauna torquata", state: "Alabama" },
   { animal_name: "White spoonbill", population: 8, scientific_name: "Platalea leucordia", state: "Georgia" },
@@ -20,16 +20,51 @@ const zooAnimals = [
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
 */
-const displayNames = [];
+const displayNames = [
+{'name': 'Jackal, asiatic', 'scientific': 'Canis aureus'},
+{'name': 'Screamer, southern', 'scientific': 'Chauna torquata'},
+{'name': 'White spoonbill', 'scientific': 'Platalea leucordia'},
+{'name': 'White-cheeked pintail', 'scientific': 'Anas bahamensis'},
+{'name': 'Black-backed jackal', 'scientific': 'Canis mesomelas'},
+{'name': 'Brolga crane', 'scientific': 'Grus rubicundus'},
+{'name': 'Common melba finch', 'scientific': 'Pytilia melba'},
+{'name': 'Pampa gray fox', 'scientific': 'Pseudalopex gymnocercus'},
+{'name': 'Hawk-eagle, crowned', 'scientific': 'Spizaetus coronatus'},
+{'name': 'Australian pelican', 'scientific': 'Pelecanus conspicillatus'},
+];
 console.log(displayNames);
+const forEachdisplayNames = [];
+data.forEach((item) => {
+  displayNames.push({
+    'name': item.name,
+    'scientific': item.scientific
+  });
+});
 
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
+const lowCaseAnimalNames = [
+  { animal_name: "jackal, asiatic"},
+  { animal_name: "screamer, southern"},
+  { animal_name: "white spoonbill"},
+  { animal_name: "white-cheeked pintail"},
+  { animal_name: "black-backed jackal"},
+  { animal_name: "brolga crane"},
+  { animal_name: "common melba finch"},
+  { animal_name: "pampa gray fox"},
+  { animal_name: "hawk-eagle, crowned"},
+  { animal_name: "australian pelican"},
+];
 
-const lowCaseAnimalNames
+const mappedlowCaseAnimalNames =
+data.map((item) => {
+  return {
+    "animal_name": item.animal_name
+  };
+});
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -37,7 +72,22 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals
+const lowPopulationAnimals = [
+  { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
+  { animal_name: "Screamer, southern", population: 1, scientific_name: "Chauna torquata", state: "Alabama" },
+  { animal_name: "White spoonbill", population: 8, scientific_name: "Platalea leucordia", state: "Georgia" },
+  { animal_name: "White-cheeked pintail", population: 1, scientific_name: "Anas bahamensis", state: "Oregon" },
+  { animal_name: "Black-backed jackal", population: 2, scientific_name: "Canis mesomelas", state: "Washington" },
+  { animal_name: "Brolga crane", population: 9, scientific_name: "Grus rubicundus", state: "New Mexico" },
+  { animal_name: "Common melba finch", population: 5, scientific_name: "Pytilia melba", state: "Pennsylvania" },
+  { animal_name: "Pampa gray fox", population: 10, scientific_name: "Pseudalopex gymnocercus", state: "Connecticut" },
+  { animal_name: "Hawk-eagle, crowned", population: 10, scientific_name: "Spizaetus coronatus", state: "Florida" },
+  { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
+];
+const filterlowPopulationAnimals =
+data.filter((item) => {
+  return (item.population < 5);
+});
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -45,9 +95,12 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-let populationTotal = 0;
-console.log(populationTotal);
+const reducePopulationTotal =
+data.reduce((total, item) => {
+  return total + item.population;
+}, 0);
 
+console.log(reducePopulationTotal);
 
 // ==== Callbacks ====  
 
