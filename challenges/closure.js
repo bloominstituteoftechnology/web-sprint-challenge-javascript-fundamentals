@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-
+// internal is part of myFunction()'s scope, and nestedFunction() is nested within myFunction(), so internal is available for use within nestedFunction(), becuase internal exists in myFunction(), and that is also where nestedFunction() lives.
 
 /* Task 2: Counter */
 
