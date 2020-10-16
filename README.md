@@ -27,14 +27,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+    - Both are advanced array methods that can iterate thorugh an array or list
+    of objects. These methods can be used to display or manipulate data. However,
+    the .map function will create a new array while it iterates through the list and criteria
 2. Explain the difference between a callback and a higher order function.
-
+    - A higher order function will have another function set as its parameter and will invoke that function. A callback function is one that gets passed into another function. A higher order function will call a callback function. 
 3. What is closure?
-
+    - Closure refers to the scope of a vatiable based on where it is nested within function scopes. A variable is inaccessible from functions outward in scope and are accessible to function that are nested below its declaration. 
 4. Describe the four rules of the 'this' keyword.
+     1. Global/Window Binding: The "this" function, if it is not closed into a certain scope will bind with the global object. In web applications, it will bind with the window, because it is the object that encompasses all. 
+    2. Implicit Binding: the "this" keyword will reference the object that the dot function follows. Meaning it will attach itself to whatever object the method is calling. If the method is not calling any particular object, it will refer to the window/global object.
+    3. New Binding: when a new constructor class is created--the skeleton of an object that can be instantiated, the "this" keyword will refer to the constructed object. Every new instance of the object, when preceding with "this", it will refer to the new object. 
+    4. Explicit Binding: if we do not want the "this" keyword to implicitly bind to the object it is attached to and point to another object, we can explicitly bind it to another object through the .call or .apply method. This prevents the "this" keyword from assuming which object is bound to and allows the developer to determine the bind. 
 
 5. Why do we need super() in an extended class?
-
+    - The super() method will pass on the properties and methods declared in the parent class 
+    down into the child class. 
+    
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
