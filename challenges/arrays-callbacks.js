@@ -22,7 +22,7 @@ of each animal. displayNames will be an array of strings, and each string should
 
 */
 const displayNames = [];
-zooAnimals.forEach(function(animal){
+let convertDisplay = zooAnimals.forEach(function(animal){
   displayNames.push(`Name: ${animal.animal_name}, Scientific: ${animal.scientific_name}`);
 })
 console.log(displayNames);
@@ -35,7 +35,7 @@ string following this pattern: "jackal, asiatic". Log the resut.
 */
 
 const lowCaseAnimalNames = [];
-zooAnimals.map(function(animal){
+let convertLow = zooAnimals.map(function(animal){
   lowCaseAnimalNames.push(animal.animal_name.toLocaleLowerCase());
 })
 console.log(lowCaseAnimalNames);
@@ -47,6 +47,11 @@ with a population less than 5.
 
 */
 const lowPopulationAnimals = [];
+let endangered = zooAnimals.filter(function(animal){
+  return animal.population < 5;
+})
+lowPopulationAnimals.push(endangered);
+
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
