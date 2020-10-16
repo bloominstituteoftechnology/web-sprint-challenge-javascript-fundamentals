@@ -36,7 +36,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 // //   displayNames.map.push(zooAnimals[i].animal_name);
 
 // }
-const lowCaseAnimalNames = zooAnimals.map.animal_name(v => v.toLowerCase());
+const lowCaseAnimalNames = zooAnimals[i].animal_name.map(l => l.toLowerCase());
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -44,12 +44,9 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = [];
-for(let i =0; i<= zooAnimals.lenght-1; i++){
-  if(zooAnimals[i].population < 5){
-    lowPopulationAnimals.push(zooAnimals[i]);
-  }
-}
+const lowPopulationAnimals = zooAnimals[i].filter((population) =>{
+  return zooAnimals[i];
+})
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -83,11 +80,11 @@ function consume(a,b,cb){
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
-function add(num1, num2, cb){
+function add(num1, num2){
 return num1 + num2
 }
 
-function multiply(num1, num2, cb){
+function multiply(num1, num2){
   return num1 * num2
 }
 
