@@ -27,13 +27,27 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+    -Primary contrast is the creation of a new array with .map. The former will loop around the data but will not return anything. One thing of note with .forEach, is the ability to mutate the array. With .map that concern is non-existant.
+
 2. Explain the difference between a callback and a higher order function.
+
+    H.O.F are able to pass callback function through its arguments. 
 
 3. What is closure?
 
+    Closure describes the availability of variable within the scope of a function. This one-way direction allows internal function to be able to access external functionas and variables; the reverse is not permitted. 
+
 4. Describe the four rules of the 'this' keyword.
 
+    There are four princicple to the 'this' keyword. 
+        1. Window/Global Object - Although seldom, if ever advice to use, this binding refferes to the global scope of JS, or node.
+        2. Implicit Binding - "left of the dot," this binding occurs when dot notation is used to invoke a function.
+        3. Explicit Bdining - occurs when .call, .apply, and . bind are utilized; redirecting the 'this'.
+        4. New Binding - used with constructor function, 'this' serves as the template for the newly created object. 
+
 5. Why do we need super() in an extended class?
+
+    In order to apply inheritance when using classes. Extends will abstract methods, while super directs the parent to the child.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
