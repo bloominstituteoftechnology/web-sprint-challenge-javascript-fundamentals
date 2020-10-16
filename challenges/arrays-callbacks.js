@@ -61,6 +61,10 @@ method takes two arguments: a callback (which itself takes two args), and an ini
 
 */
 let populationTotal = 0;
+let popConvert = zooAnimals.reduce(function(counter, animal){
+  return counter + animal.population;
+},0)
+populationTotal = popConvert;
 console.log(populationTotal);
 
 
