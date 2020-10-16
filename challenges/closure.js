@@ -16,9 +16,14 @@ function myFunction() {
 }
 myFunction();
 
-// Explanation: 
+// Explanation: nested functions can access whatever thier parent so happens to pass down to them, but the parent cannot access the child information. It's a rule of inheritance. 
 
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+function summation(paramter){
+  for()  
+}
+
+
