@@ -18,7 +18,14 @@ myFunction();
 
 // Explanation: 
 
+    //const Internal is nested within myFucntion, and nestedFunction is also within the scope of my Fucntion. Upon executing console.log, nestedFucntion will look outward to find const internal.
+
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function summation(number) {
+  let arr = Array.from({ length: number }, (v, k) => k + 1);
+  return arr.reduce((a, b) => a + b, 0)
+}
