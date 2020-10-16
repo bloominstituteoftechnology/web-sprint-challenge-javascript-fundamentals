@@ -26,14 +26,24 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+-forEach runs a for loop on every item in a dataset, and outputs the answer you tell it to
+-map runs through the arrays and creates a new array based on the conditions given
 
 2. Explain the difference between a callback and a higher order function.
+-callback function is a function that is used by another function as a 'callback' to it, to help set up variables etc.
+-higher order function is one that has different functions nested inside of it that run based on different criteria given with the parameters
 
 3. What is closure?
+-a function bundled with references to outside objects/variables to be used in the function
 
 4. Describe the four rules of the 'this' keyword.
+Is the function called by new?
+Is the function called by call(), apply(), or bind()?
+Is the function called as a method, ie: obj.func()?
+Is the function called in the global scope?
 
 5. Why do we need super() in an extended class?
+it inherits the methods and data from the parent class
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
