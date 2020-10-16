@@ -31,9 +31,10 @@ console.log(displayNames)
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
+const lowCaseAnimalNames = zooAnimals.map((animalAtEachIndex) =>{
+  return animalAtEachIndex.animal_name.toLowerCase();
+})
 
-const lowCaseAnimalNames = zooAnimals.animal_name.map(function(lower){
-  return lower.toLowerCase});
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
