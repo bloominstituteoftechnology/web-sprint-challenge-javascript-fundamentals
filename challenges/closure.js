@@ -18,7 +18,19 @@ myFunction();
 
 // Explanation: 
 
+// nestedFunction can access the parent's variable internal because it is run locally within myFunction and closure has been created. This allows for anynchronous action.
+
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function summation(aNumber) {
+  let currentTotal = 0;
+  for (let i = 1; i <= aNumber ; i++) {
+    currentTotal += i;
+  }
+  return currentTotal;
+}
+
+console.log(summation(4)); //10
