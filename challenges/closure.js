@@ -14,11 +14,22 @@ function myFunction() {
   };
   nestedFunction();
 }
-myFunction();
+//myFunction();
 
 // Explanation: 
+//Because of closure the function nestedFunction can reach out to grab the information by myFunction would not be able to reach inside of nestedFunction to grab any variables initialized within the confines of it's curly braces
+
 
 
 /* Task 2: Counter */
 
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function sumation(num) {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  return sum;
+}; 
+ log(sumation(4));
