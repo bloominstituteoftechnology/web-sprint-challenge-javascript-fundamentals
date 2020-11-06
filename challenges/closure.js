@@ -1,4 +1,4 @@
-// ==== Closures ==== 
+// ==== Closures COMPLETE==== 
 
 /* Task 1: Study the code below and explain in your own words why nested function can access the variable internal. */
 
@@ -31,7 +31,7 @@ function summation(number) {
     counter += i;
     console.log(i)
   }
-  
+
   return counter;
 
 }
