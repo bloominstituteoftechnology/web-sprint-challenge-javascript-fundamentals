@@ -17,7 +17,7 @@ function myFunction() {
 myFunction();
 
 // Explanation: 
-//The nested function can access the variable internal because of the lexical scope of the outer function. An internal function can look out of it's local scope into the global scope to try to find the function it needs. 
+// The nested function can access the variable internal because of the lexical scope of the outer function. An internal function can look out of it's local scope into the global scope to try to find the function it needs. 
 
 /* Task 2: Counter */
 
