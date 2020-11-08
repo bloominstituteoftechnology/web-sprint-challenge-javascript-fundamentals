@@ -18,7 +18,21 @@ myFunction();
 
 // Explanation: 
 
+//When you declare a local variable, that variable has a scope. Generally, local variables exist only within the block or function in which you declare them.  so the internal variable exists in the entirety of the function scope 
+
 
 /* Task 2: Counter */
 
-/* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+/* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. 
+For example, `summation(4)` should return 10 because 1+2+3+4 is 10. */
+
+function sumation(number) {
+  let permutationNuber = 0;
+  for (let i = 1; i <= number; i++) {
+    permutationNuber += i;
+  }
+  return permutationNuber;
+}; 
+
+log(sumation(4));
+log(sumation(6));
