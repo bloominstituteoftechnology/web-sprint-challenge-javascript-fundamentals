@@ -26,10 +26,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+`.forEach` and `.map` are similar in the fact that they both manipulate arrays, but as `.forEach` simply runs through each item in an array `.map` actually returns something.
 
 2. Explain the difference between a callback and a higher order function.
+A callback is a function that makes reference to another function somewhere in the code in the arguments or parameters, while a higher order function uses a function within a function to run.
 
 3. What is closure?
+Closure is the level of depth or the block within a function.
 
 4. Describe the four rules of the 'this' keyword.
 

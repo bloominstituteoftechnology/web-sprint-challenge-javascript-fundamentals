@@ -21,6 +21,7 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+zooAnimals.forEach( e => {displayNames.push(`Name:${e.animal_name} , Scientific: ${e.scientific_name}`);})
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -28,26 +29,32 @@ console.log(displayNames);
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
+const getLow = (e =>{ e.toLowerCase});
 
 const lowCaseAnimalNames
 console.log(lowCaseAnimalNames);
 
+let anonF = (e) => e.toLowerCase;
+let getLow = zooAnimals.map(anonF(zooAnimals.animal_name))
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals
-console.log(lowPopulationAnimals);
+let cb = (e) => {
+  return e.population < 5;
+};
+let lowPop = zooAnimals.filter(cb);
+
+console.log(lowPop);
 
 /* Request 4: .reduce() 
 
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-let populationTotal = 0;
-console.log(populationTotal);
-
+let cb2 = ( total , currentValue ) => { return total + currentValue.population; }
+console.log( zooAnimals.reduce(  cb2, 0 ));
 
 // ==== Callbacks ====  
 
@@ -57,6 +64,14 @@ console.log(populationTotal);
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
+function consume (param1, param2) {
+  return (param1 + " and " + param2);
+}
+
+function callback (callback) {
+  callback (arguments[1], arguments[2]);
+};
+
 
 
 /* Step 2: Create several functions to callback with consume();
