@@ -26,7 +26,7 @@ myFunction();
 
 function summation(data){
 let total = 0;
-function counter {
+function counter() {
   for (let i = 0; i < data; i ++)
   total += i 
 }

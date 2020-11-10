@@ -22,7 +22,11 @@ function CuboidMaker(length, width, height){
     Formula for cuboid volume: length * width * height
   */
   
-  let volume = this.length * this.width * this.height;
+  CuboidMaker.prototype.volume = function(){
+
+    return this.length * this.width * this.height;
+
+  } 
     
   
   
@@ -36,10 +40,11 @@ function CuboidMaker(length, width, height){
   */
 // CuboidMaker.prototype.
 
-  function SurfaceArea(){
+CuboidMaker.prototype.surfaceArea = function (){
+  return 2 * volume()
+}  
 
-}
-  
+
   /* == Step 4: Create a new object that uses CuboidMaker ==
     Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
     Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
