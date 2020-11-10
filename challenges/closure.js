@@ -28,10 +28,9 @@ myFunction();
   {
     let counter = 0;
     
-    for(let i = 0; i <= 0; i++)
+    for(let i = 0; i <= 10; i++)
     {
       counter += i;
       console.log(i);
     }
     return counter;
-  }
