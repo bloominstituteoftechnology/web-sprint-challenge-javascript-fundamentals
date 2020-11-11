@@ -27,8 +27,10 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.map returns a new array when invoked and .foreach returns undefined, .map is a chainable method while .foreach is not
 2. Explain the difference between a callback and a higher order function.
 
+a higher order function accepts the first class function as an arguement, a callback function is when the higher order function is used as a parameter
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
