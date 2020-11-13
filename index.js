@@ -146,10 +146,10 @@ function multiply(num1, num2){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(length, width, height){
-  this.length = length;
-  this.width = width;
-  this.height = height;
+function CuboidMaker(values){
+  this.length = values.length;
+  this.width = values.width;
+  this.height = values.height;
 };
 
 
@@ -182,7 +182,8 @@ function CuboidMaker(length, width, height){
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
 
-  let cuboid = new CuboidMaker(4,5,5);
+ const cuboid = new CuboidMaker(4, 5, 5)
+
 
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
@@ -195,11 +196,11 @@ console.log(cuboid.surfaceArea()); // 130
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 
 class CuboidMakerTwo{
-  constructor (length, width, height)
+  constructor (values)
   {
-    this.length = length;
-    this.width = width;
-    this.height = height;
+    this.length = values.length;
+    this.width = values.width;
+    this.height = values.height;
   }
 
  volume(){
@@ -211,7 +212,8 @@ surfaceArea(){
 };
 
 };
-let cuboidTwo = new CuboidMakerTwo(4, 5, 5);
+
+let cuboidTwo = new CuboidMakerTwo(4, 5, 5)
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
