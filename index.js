@@ -17,17 +17,23 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// The code is using closure to reach outside of the function. The nested function can access the variable internal because it is a child function of MyFunction and there for has inheretence. 
 
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
 
+
+function summation(numbah){
+  let numberr = 0;
+  for (let i = 1; i <= numbah; i++){
+    numberr += i;
   }
- 
+  return numberr;
+}
+console.log(summation(5));
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -48,9 +54,13 @@ const zooAnimals = [
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
   The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
   */
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function animalNames(array){
+    animalNames.forEach(myFunc){
+      displayNames = [];
+      return `${animal_name} , ${scientific_name}`
+    }
+   }
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
