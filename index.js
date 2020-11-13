@@ -1,6 +1,6 @@
 //🚀🚀🚀 ==== Topic #1 Closures ==== 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
-Study the code below and explain in your own words why nested function can access the variable internal. */
+Study the code below and explain in your own words why nested function can access the variable internal */
 
 const external = "I'm outside the function";
 
@@ -158,7 +158,6 @@ function greeting(str1, str2, words) {
 */
 function CuboidMaker(attributes){
   constructor(attributes)
-  super(attributes);
   this.length = attributes.length;
   this.width = attributes.width;
   this.height = attributes.height;
@@ -169,8 +168,8 @@ function CuboidMaker(attributes){
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-volume(length, width, height) {
-  return length * width * height
+volume() {
+  return this.length * this.width * this.height;
   }
 
 
@@ -181,7 +180,9 @@ volume(length, width, height) {
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-
+surface() {
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+}
 
 
 
@@ -189,7 +190,11 @@ volume(length, width, height) {
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
-
+const cube = new CuboidMaker({
+  length: 4;
+  width: 5;
+  height: 5;
+});
 
 
 
