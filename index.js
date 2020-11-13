@@ -120,23 +120,22 @@ console.log(lowPopulationAnimals(zooAnimals));
       return cb(a, b);
     }
 
-// console.log(consume(1, 2, callBack)); 
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Create a function named add that returns the sum of two numbers 🦁🦁🦁
 const add = (a, b) => a + b;
 
-  // console.log(consume(1, 2, add));
 
   // 🦁🦁🦁 Create a function named multiply that returns the product of two numbers 🦁🦁🦁
   const multiply = (a, b) => a * b;
 
-  // console.log(consume(1, 2, multiply));
+ 
 
  // 🦁🦁🦁 Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!" 🦁🦁🦁
-  function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(str1, str2, words) {
+    const greeting = ", nice to meet you!"
+   return `Hello ${str1} ${str2} ${words}`
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
@@ -157,8 +156,12 @@ const add = (a, b) => a + b;
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(attributes){
+  constructor(attributes)
+  super(attributes);
+  this.length = attributes.length;
+  this.width = attributes.width;
+  this.height = attributes.height;
 }
 
 
@@ -166,6 +169,9 @@ function CuboidMaker(/*Your Code Here */){
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
+volume(length, width, height) {
+  return length * width * height
+  }
 
 
 
