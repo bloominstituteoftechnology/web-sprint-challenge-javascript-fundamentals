@@ -16,15 +16,16 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// Although internal is not in the global scope of this function, its value can still be accessed thru the nestedFunction when invoked by tthe parent myFunction.
 
 
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
-/* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+/* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. 
+For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
+function summation(num1,num2,num3,num4) {
+  return num1 + num2 + num3 + num4
 
   }
  
@@ -46,20 +47,36 @@ const zooAnimals = [
   ];
   
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
-  The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+  The zoos want to display both the scientific name and the animal name in front of the habitats. 
+  Populate the displayNames array with only the animal_name and scientific_name of each animal. 
+  displayNames will be an array of strings, 
+  and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
+   
+//   return // what we want inside of the new array 
+//   // the return statement is pushing something to the new array 
+// });
   */
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+ const displayNames = [];
+
+  function animalNames(array){
+    array.forEach(function(item){
+        displayNames.push(`${item.animal_name} , ${item.scientific_name}.`)
+  })
   }
-  
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
-  The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
+  The zoos need a list of all their animal's names (animal_name only) converted to lower case. 
+  Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
   */
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+
+const lowCaseAnimalNames = []
+
+  function lowerCaseNames(item){
+    return item.map(function(item){
+       item.animal_name.toLowerCase();
+    });
   }
-  
+  lowerCaseNames(zooAnimals);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
