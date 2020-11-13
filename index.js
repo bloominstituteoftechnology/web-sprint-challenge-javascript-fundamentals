@@ -17,16 +17,27 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// The nested function can access the variable "internal", internally, due to the local scope of that function.  If internal were nested outside of the function myFunction, it would be in the global scope.
 
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+const arr= [1, 2, 3, 4];
 
-  }
+const count = arr.reduce(function summation(accumulator, num) {
+  return accumulator + num;
+console.log(summation(1, 4));
+}, 0);
+console.log(count)
+
+// function summation(num) {
+// let sum =[];
+// for (let i = 0; i <= num; i++) {
+//     return num[i].push(sum);
+//   }
+// }
+// console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -48,9 +59,15 @@ const zooAnimals = [
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
   The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
   */
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(data) {
+    const displayNames = data.forEach(function (item) {
+      displayNames.push(
+        `Name: ${data.keys(animal_name)}`,
+        `Scientific: ${data.keys(scientific_name)}`
+      );
+    });
   }
+  console.log(animalNames(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
