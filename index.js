@@ -16,7 +16,8 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+//nestedFunction is able to pull the variable from outside the scope of its function due to the fact that it is enclosed within the brackets of myFunction. 
+//myFunction provides closure to the statement, nestedFunction is lexically scoped within the closure and is able to pull the internal variable from outside itself
 
 
 
@@ -48,15 +49,24 @@ const zooAnimals = [
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
   The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
   */
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(zooAnimals){
+    const displayNames = [];
+    
+    zooAnimals.forEach(function(item){
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+    });
+    console.log(displayNames);
+    return displayNames;
   }
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
   */
-  function lowerCaseNames(/*Your Code Here*/){
+  function lowerCaseNames(zooAnimals){
+    const lowCaseAnimalNames = zooAnimals.map()
+      return item.state.toLowerCase({animal_name});
+    
     /*Your Code Here*/
   }
   

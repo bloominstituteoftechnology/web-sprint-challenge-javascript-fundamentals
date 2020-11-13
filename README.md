@@ -34,7 +34,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 4. Describe the four rules of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
-
+super forces an extended child class to inherit values from the parent it is extending from
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
