@@ -27,6 +27,8 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+Testing 
+
 2. Explain the difference between a callback and a higher order function.
 
 3. What is closure?
