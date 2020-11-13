@@ -24,9 +24,12 @@ myFunction();
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(num) {
+  let counter = 0
+  for(let i = 0; i < num + 1; i++){
+    counter = counter + i;
+  }
+  return counter;
   }
  
 
