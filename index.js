@@ -115,20 +115,24 @@ console.log(lowPopulationAnimals(zooAnimals));
     * The last parameter accepts a callback
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
-  }
+ 
+ function consume(a, b, cb){
+      return cb(a, b);
+    }
+
+// console.log(consume(1, 2, callBack)); 
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Create a function named add that returns the sum of two numbers 🦁🦁🦁
-  function add(/*Your Code Here */){
-    /*Your Code Here*/
-  }
-// 🦁🦁🦁 Create a function named multiply that returns the product of two numbers 🦁🦁🦁
-  function multiply(/*Your Code Here */){
-   /*Your Code Here */
-  }
+const add = (a, b) => a + b;
+
+  // console.log(consume(1, 2, add));
+
+  // 🦁🦁🦁 Create a function named multiply that returns the product of two numbers 🦁🦁🦁
+  const multiply = (a, b) => a * b;
+
+  // console.log(consume(1, 2, multiply));
 
  // 🦁🦁🦁 Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!" 🦁🦁🦁
   function greeting(/*Your Code Here */){
