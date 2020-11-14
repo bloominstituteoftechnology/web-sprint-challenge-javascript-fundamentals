@@ -1,6 +1,6 @@
 //🚀🚀🚀 ==== Topic #1 Closures ==== 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
-Study the code below and explain in your own words why nested function can access the variable internal */
+Study the code below and explain in your own words why nested function can access the variable "internal" */
 
 const external = "I'm outside the function";
 
@@ -17,27 +17,33 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-// The nested function can access the variable "internal", internally, due to the local scope of that function.  If internal were nested outside of the function myFunction, it would be in the global scope.
+// The nested function can access the variable "internal", internally, due to the local scope of that function.  If internal were outside of the function myFunction, it would be in the global scope.
 
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Create a function called `summation` that accepts a parameter and uses a counter to return the summation of that number. For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-const arr= [1, 2, 3, 4];
 
-const count = arr.reduce(function summation(accumulator, num) {
-  return accumulator + num;
-console.log(summation(1, 4));
-}, 0);
-console.log(count)
+// const arr= [1, 2, 3, 4];
 
-// function summation(num) {
-// let sum =[];
-// for (let i = 0; i <= num; i++) {
-//     return num[i].push(sum);
-//   }
-// }
-// console.log(summation(4));
+// const count = arr.reduce(function summation(accumulator, num) {
+//   return accumulator + num;
+// console.log(summation(1, 4));
+// }, 0);
+// console.log(count)
+
+function summation(num1) {
+  let arr = []
+  for (let i = 0; i <= num1; i++) {
+     arr.push(i);
+   }
+ console.log(arr)
+  let sum = arr.reduce(function (acc, num) {
+        return acc + num;
+  }, 0);
+  return sum;
+}
+console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -64,7 +70,7 @@ const zooAnimals = [
     const displayNames = [];
     data.forEach(function (item) {
       return displayNames.push(
-        `Name: ${data.animal_name.object.keys}, Scientific: ${data.scientific_name.object.keys}.`
+        `Name: ${item.animal_name}, Scientific: ${item.scientific_name}.`
       );
       // return displayNames;
     });
@@ -76,14 +82,14 @@ const zooAnimals = [
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the result.
   */
-//  const lowerCaseNames = zooAnimals.map(function (item) {
-//    return item.animal_name.tolowerCase();
-//  });
-// console.log(lowerCaseNames);
+ const lowerCaseNames = zooAnimals.map(function (item) {
+   return item.animal_name.toLowerCase();
+ });
+console.log(lowerCaseNames);
  
 // function lowCaseAnimalNames(data) {
 //   const lowerCaseNames = data.map(function(item) {
-//   return item.animal_name.tolowerCase()
+//   return item.animal_name.toLowerCase()
 //   console.log(lowCaseAnimalNames);
 //   });
   // console.log(lowCaseAnimalNames(zooAnimals));
@@ -103,10 +109,11 @@ console.log(lowPopulationAnimals(zooAnimals));
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
   */
-  function USApop(data){
-    // const totalPop = []
-  }
-  
+const USApop = zooAnimals.reduce((acc, item) => {
+  return acc += item.population;
+}, 0);
+console.log(USApop);
+
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -133,9 +140,9 @@ const add = (a, b) => a + b;
  
 
  // 🦁🦁🦁 Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!" 🦁🦁🦁
-function greeting(str1, str2, words) {
-    const greeting = ", nice to meet you!"
-   return `Hello ${str1} ${str2} ${words}`
+function greeting(str1, str2) {
+    
+   return `Hello ${str1} ${str2}, nice to meet you!`
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
@@ -171,15 +178,12 @@ CuboidMaker.prototype.volume = function() {
   return this.length * this.width * this.height;
   }
 
-
-
-
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
   Create another method using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-CuboidMaker.prototype.surface = function() {
+CuboidMaker.prototype.surfaceArea = function() {
   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
 }
 
@@ -208,14 +212,24 @@ const cube = new CuboidMaker({
 
 class CuboidMakerTwo {
   constructor(attributes) {
-    volume() 
-      return this.length * this.width * this.height;
+    this.length = attributes.length;
+    this.width = attributes.width;
+    this.height = attributes.height;
     }
-    surface(){
-      return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
-    }
+  volume() {
+    return this.length * this.width * this.height;
   }
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+}
+  
 
+  const cuoboidTwo = new CuboidMakerTwo({
+    length: 4,
+    width: 4,
+    height: 5
+  });
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
