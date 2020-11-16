@@ -79,11 +79,9 @@ In your solutions, it is essential that you follow best practices and produce cl
 
 ### Task 3: Stretch Goals 
 
-There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements!
+There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements! Please remember to comment out your stretch goals before you submit 
 
 ## Submission format
-
-Follow these steps for completing your project.
 
 See Canvas for submission instructions 
 
