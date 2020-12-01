@@ -19,21 +19,27 @@ const zooAnimals = [
 
 The zoos want to display both the scientific name and the animal name in front of the habitats. Populate the displayNames array with only the animal_name and scientific_name of each animal. displayNames will be an array of strings, and each string should follow this pattern: "Name: Jackal, asiatic, Scientific: Canis aureus."
 
-*/
-//  const displayNames = zooAnimals.forEach(function(animal_name, scientific_name)){
-  // return zooAnimals.animal_name;
-
-// console.log(displayNames);
-
+ */ 
+//  create an empty array for forEach. because it does not return an array
+const displayNames = []
+// use zooAnimal to specify an array for foreach, and animal is the element
+zooAnimals.forEach(animal => {  
+  // use push to push the elements(which is an object in this specific case) into the array
+  displayNames.push({
+    animal_name: animal.animal_name, 
+    scientific_name: animal.scientific_name
+  })
+})
+ console.log(displayNames);
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
 
 */
-
-const lowCaseAnimalNames = zooAnimals.map((animal_name) => {
- var zoo =  zooAnimals.animal_name
- return zoo = zoo.toLowerCase()
+//  use .map function to iterate through the array, the array element is animal
+const lowCaseAnimalNames = zooAnimals.map(animal => {
+  //  use return to return element using dot notation 
+  return animal.animal_name.toLowerCase()
 })
 console.log(lowCaseAnimalNames)
 
@@ -42,8 +48,10 @@ console.log(lowCaseAnimalNames)
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
- const lowPopulationAnimals = zooAnimals.filter((population) => {
-   return zooAnimals.population < 5
+//  use .filter  to iterate through the array that has population less than 5
+ const lowPopulationAnimals = zooAnimals.filter(animal => {
+  //   returns the true or flase in the element with   >5 (false) <5 (true) population
+   return animal.population < 5
  })
 console.log(lowPopulationAnimals);
 
@@ -52,8 +60,10 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = zooAnimals.reduce((total, population) => {
-  return total  += zoo.zooAnimals.population;
+// use reduce method to addd the total population of animals
+const populationTotal = zooAnimals.reduce((total, animal) => {
+//  use return to get the total of the animal.population setting it to += so it does not go over the given amount
+  return total  += animal.population;
 
 }, 0)
 console.log(populationTotal);
@@ -67,19 +77,32 @@ console.log(populationTotal);
   * The last parameter accepts a callback
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
-
-
+//  the a, b, are the primitive values and cb is the function 
+function consume(a, b, cb){
+  //  this invocates the cb and passing in the a & b
+  return cb(a,b)
+}
+ 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
   * Create a function named multiply that returns the product of two numbers 
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+const add = (x,y) =>{
+  return x + y
 
+}
+const multiply = (x,y) =>{
+  return x * y
 
+}
+const greeting = (x,y) =>{
+  return `Hello ${x} ${y}, nice to meet you!`
+}
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 
