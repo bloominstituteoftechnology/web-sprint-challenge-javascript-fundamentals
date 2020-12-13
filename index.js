@@ -152,7 +152,9 @@ function greeting(firstname, lastname){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
+function CuboidMaker(/*Your Code Here */){ this.length = attributes.length;
+  this.width = attributes.width;
+  this.height = attributes.height;
   /*Your Code Here */
 }
 
@@ -160,7 +162,11 @@ function CuboidMaker(/*Your Code Here */){
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
-
+  CuboidMaker.prototype.volume = function () {
+    return `Total volume of cuboid is ${this.length *
+      this.width *
+      this.height}`;
+  };
 
 
 
@@ -169,7 +175,12 @@ function CuboidMaker(/*Your Code Here */){
   Create another method called surfaceArea using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
-
+  CuboidMaker.prototype.surfaceArea = function () {
+    return `Total surface area of cuboid is ${2 *
+      (this.length * this.width +
+        this.length * this.height +
+        this.width * this.height)}`;
+  };
 
 
 
@@ -177,15 +188,19 @@ function CuboidMaker(/*Your Code Here */){
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
-
+  const cuboidOne = new CuboidMaker({
+    'length': 4,
+    'width': 5,
+    'height': 5,
+  })
 
 
 
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
