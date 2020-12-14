@@ -203,9 +203,15 @@ class CuboidMakerTwo {
     this.width = width;
     this.height = height;
   }
+  volume() {
+    return this.length*this.width*this.height;
+  };
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  };
 }
 
-let cuboidTwo = new CuboidMaker(4, 5, 5);
+let cuboidTwo = new CuboidMakerTwo(4, 5, 5);
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 console.log(cuboidTwo.volume()); // 100
