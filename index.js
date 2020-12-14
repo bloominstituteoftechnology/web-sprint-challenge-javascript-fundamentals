@@ -71,8 +71,9 @@ const zooAnimals = [
         'name':item.animal_name,
         'scientific': item.scientific_name
       });
-      return displayNames.toString();
-    })
+      
+    });
+    return displayNames;
 
   }
   
@@ -83,8 +84,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
+  function lowerCaseNames(array){
     /*Your Code Here*/
+    const smallNames = array.map((item)=> item.animal_name.toLowerCase());
+    return smallNames;
+    
+
   }
   
   
@@ -93,8 +98,10 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(array){
     /*Your Code Here*/
+    const endangered = array.filter((item) => item.population < 5);
+    return endangered;
   }
   
 
@@ -104,8 +111,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
+  function USApop(array){
     /*Your Code Here*/
+    const population = array.reduce((total, item) => {return total + item.population},0);
+    return population;
+
   }
   
   
