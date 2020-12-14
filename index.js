@@ -28,11 +28,17 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let totes = 0
+  let summer =[]
+  summer.push(number)
+  for (let i = 0;i < summer.length; i++){
+    totes+= summer[i]
   }
- 
+  console.log(summer)
+  }
+
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -56,9 +62,16 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(ary){
+   ary.forEach(sciDisplay)
+
+  function sciDisplay (animal_name,scientific_name){
+   
   }
+    return`name ${animal_name}, scientific 
+  ${scientific_name} `
+  }
+  
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -67,8 +80,11 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(arry){
+    let lowList = arry.map(function(l){
+      return l.toLowerCase();
+    })
+    return lowList
   }
   
   
@@ -77,8 +93,13 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(arry){
+    let lowPop = arry.filter(function(e){
+      return e.population <= 5
+     })
+
+     return lowPop
+
   }
   
 
@@ -88,8 +109,12 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(arry){
+    start=0
+    let reducer =(accumulator, item) => {
+      return accumulator + item
+    }
+    let totes = arry.reduce(reducer,start)
   }
   
   
@@ -101,28 +126,29 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
-  }
+   function consume(a,b,cb){
+  //  function(){}
+  //  function cb(callback){callback}
+   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(num1,num2){
+    return num1+num2
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(num1,num2){
+   return num1 * num2
   }
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(first,last){
+   return `Hello ${first} ${last}, nice to meet you!`
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
@@ -140,11 +166,15 @@ function greeting(/*Your Code Here */){
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
+
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(length,width,height){
+  this.length = length;
+  this.width = width;
+  this.height = height
+  
 }
 
 
@@ -152,7 +182,9 @@ function CuboidMaker(/*Your Code Here */){
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-
+CuboidMaker.prototype.volume = function(length,width,height){
+  return length*width*height
+}
 
 
 
