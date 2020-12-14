@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// nestfunction can access 'internal' because they are within the same scope which in this case is the same function scope of 'myFunction'.
 
 
 
@@ -28,11 +28,14 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let counter = 0;
+  for (let i = 1; i <= number; i++) {
+    counter += i;
   }
- 
+  return counter;
+}
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -56,8 +59,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(){
+    let displayNames = [];
+    zooAnimals.forEach(element => {
+      displayNames.push(`name: ${element.animal_name}, scientific: ${element.scientific_name}`)
+    });
+    return displayNames;
   }
   
 
@@ -67,8 +74,8 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(){
+    return zooAnimals.map(element => element.animal_name.toLowerCase());
   }
   
   
