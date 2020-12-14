@@ -117,16 +117,16 @@ describe('greeting', ()=>{
 
 // prototypes
 describe('Instance of CuboidMaker', () => {
-    let cuboid
+   let cuboid
     beforeEach(() => {
       cuboid = new functions.CuboidMaker({
         length: 4,
         width: 5, 
-        height:5,
+        height: 5,
       })
     })
     it('[1] initializes with length', () => {
-        console.log(cuboid);
+        // console.log(cuboid);
       expect(cuboid.length).toBe(4)
     })
     it('[2] initializes with the width', () => {
