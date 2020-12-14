@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// nestedFunction is inside of myFunction where the const "internal" is declared
 
 
 
@@ -28,10 +28,17 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
+function summation(num) {
   /*Your Code Here*/
-
+  if(num < 0){
+    num = num*-1;
   }
+  newNum = 0;
+  for(i = 0; i <= num; i++){
+    newNum += i;
+  }
+    return newNum; 
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,8 +63,17 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
+  function animalNames(zooAnimals){
     /*Your Code Here*/
+    const displayNames = [];
+    zooAnimals.forEach((item) => {
+      displayNames.push({
+        'name':item.animal_name,
+        'scientific': item.scientific_name
+      });
+      return displayNames.toString();
+    })
+
   }
   
 
