@@ -55,9 +55,14 @@ Use animalNames to populate and return the displayNames array with only the anim
 displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
 */
 
-function animalNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function animalNames() {
+  const displayNames = [];
+  zooAnimals.forEach((animal) => {
+    displayNames.push(`name: ${animal.animal_name}, scientific: ${animal.scientific_name}`)
+  });
+  return (displayNames);
 }
+// console.log(animalNames());
 
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -66,9 +71,13 @@ Using lowerCaseNames use .map() to create a new array of strings with the animal
 For example: ['jackal, asiatic', .....]
 */
 
-function lowerCaseNames(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lowerCaseNames() {
+  const lowCaseAnimalNames = zooAnimals.map((animal) => {
+    return animal.animal_name.toLowerCase()
+  })
+  return (lowCaseAnimalNames);
 }
+// console.log(lowerCaseNames());
 
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -76,10 +85,13 @@ The zoo is concerned about animals with a lower population count.
 Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
 */
 
-function lowPopulationAnimals(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lowPopulationAnimals() {
+  const lowPopulationAnimals = zooAnimals.filter((animal) => {
+    return animal.population < 5
+  })
+  return (lowPopulationAnimals);
 }
-
+console.log(lowPopulationAnimals());
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
 The zoo needs to know their total animal population across the United States. 
