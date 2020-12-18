@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+/*The nested function was created inside of the internal function going to the external function transferring to the internal message*/
 
 
 
@@ -28,10 +28,31 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
+function summation(String arg[]) {
+  class sum
+{
+	public static void main()	
+	{
+                  int n,sum=0;
+                  
+                  Scanner sc=new Scanner(System.in);
+ 
+	    System.out.println("4");
+                   n=sc.nextInt();
+                   int a[]=new int[n]; 
+	    System.out.println("enter the "+n+" numbers ");
+                   for(int i=0;i<n;i++)
+                   {      
+	             System.out.println("enter  number  "+(i+1)+":");
+                           a[i]=sc.nextInt();
+                   }
+                   for(int i=0;i<n;i++)
+                   {
+                           sum+=a[i];
+                   }  	    
+                   System.out.println("sum of "+n+" numbers is ="+sum);                  
+              	}
+} 
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
