@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+// It can access the variable internal because it's in the parent function and child functions can inherit whatever is in the parent function
 
 
 
@@ -28,9 +28,14 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+    this.number = number
+     
+    function counter(){
+      for(i = this.number, i >= 1, --){
+        return this.number += this.number += this.number[-1]
+      }
+    }
   }
  
 
