@@ -63,10 +63,9 @@ displayNames will be an array of strings, and each string should follow this pat
 
 function animalNames(anArray){
   let newArray = [];
-  for (var i in anArray) {
+  anArray.forEach((item, i) => {
     newArray.push(`name: ${anArray[i].animal_name}, scientific: ${anArray[i].scientific_name}`)
-  }
-
+  });
   return newArray
 }
 
