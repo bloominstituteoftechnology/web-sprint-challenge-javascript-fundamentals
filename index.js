@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀:
-
+//It reaches out using closure.
 
 
 
@@ -28,7 +28,7 @@ myFunction();
 
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(num) {
+let summation = (num) => {
   let count = 0;
   for (var i = 0; i < num; i++) {
     console.log(count += i + 1);
@@ -36,8 +36,6 @@ function summation(num) {
 
   return count;
 }
-
-
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -76,7 +74,7 @@ Using lowerCaseNames use .map() to create a new array of strings with the animal
 For example: ['jackal, asiatic', .....]
 */
 
-function lowerCaseNames(anArray){
+let lowerCaseNames = (anArray) => {
   let newArray = anArray.map(function(item, i){//this is a callback function, the i is representing index allowing it to loop through
     //creates a new array
     //whatever is returned will be put into the new array
@@ -93,7 +91,7 @@ The zoo is concerned about animals with a lower population count.
 Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
 */
 
-function lowPopulationAnimals(anArray){
+let lowPopulationAnimals = (anArray) => {
   let newArray = anArray.filter(function(item, i){//this is a callback function, i to represent index as it loops
     //creates a new array
     //whatever is returned will be put into the new array
@@ -109,7 +107,7 @@ Using USApop find the total population from the zoos array using the .reduce() m
 Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
 */
 
-function USApop(anArray){
+let USApop = (anArray) => {
   let newArray = anArray.reduce(function(acc, item) {
     return item.population + acc
   }, 0)
@@ -125,7 +123,7 @@ function USApop(anArray){
 * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
-function consume(a, b, cb){
+let consume = (a, b, cb) => {
   return cb(a, b);
 }
 
@@ -133,19 +131,19 @@ function consume(a, b, cb){
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
 
-function add(a, b){
+let add = (a, b) => {
   return a + b;
 }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
 
-function multiply(a, b){
+let multiply = (a, b) => {
   return a * b;
 }
 
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
-function greeting(fName, lName){
+let greeting = (fName, lName) => {
   return `Hello ${fName} ${lName}, nice to meet you!`
 }
 
