@@ -64,9 +64,13 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-   }
+function animalNames(zooAnimals){
+  let displayNames = [];
+  zooAnimals.forEach(function(item){
+    displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+  });
+  return displayNames;
+}
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -74,31 +78,37 @@ const zooAnimals = [
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
-
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+ function lowerCaseNames(zooAnimals){
+  const lowCaseAnimalNames = zooAnimals.map(function(item){
+    return item.animal_name.toLowerCase();
+  });
+  return lowCaseAnimalNames;
+}
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
-
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+ function lowPopulationAnimals(zooAnimals){
+  const lowPopulationAnimals = zooAnimals.filter(function(item){
+    return item.population < 5;
+  });
+  return lowPopulationAnimals;
+}
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
   Using USApop find the total population from the zoos array using the .reduce() method. 
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
+ function USApop(zooAnimals){
+  const USApop = zooAnimals.reduce(function(accumulator, item){
+    return accumulator + item.population;
+  },0);
+  return USApop;
+}
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
