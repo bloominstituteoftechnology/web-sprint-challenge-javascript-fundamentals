@@ -38,8 +38,8 @@ function summation(number){
      counter += i;
   }
   return counter;
- }
- console.log(summation(4))
+  }
+ console.log(summation(4)) // console log is 10.
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -70,7 +70,7 @@ function animalNames(zooAnimals){
     displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
   });
   return displayNames;
-}
+  }
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -83,7 +83,7 @@ function animalNames(zooAnimals){
     return item.animal_name.toLowerCase();
   });
   return lowCaseAnimalNames;
-}
+  }
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -95,7 +95,7 @@ function animalNames(zooAnimals){
     return item.population < 5;
   });
   return lowPopulationAnimals;
-}
+  }
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -107,7 +107,7 @@ function animalNames(zooAnimals){
     return accumulator + item.population;
   },0);
   return USApop;
-}
+  }
 
   
   
@@ -120,7 +120,7 @@ function animalNames(zooAnimals){
   */
 
   function consume(a,b,cb){
-    return cb (a,b);
+    return cb (a,b); // consume function returns an invocation of cb- passing a nd b into cb as its arguments.
   }
  
   
@@ -166,7 +166,7 @@ function CuboidMaker(attributes){
   this.length = attributes.length;
   this.width = attributes.width;
   this.height = attributes.height;
-}
+  }
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
@@ -215,12 +215,30 @@ function CuboidMaker(attributes){
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
 
-}
+  constructor(attributes){
+    this.length = attributes.length;
+    this.width = attributes.width;
+    this.height = attributes.height;
+  }
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
+  }
+const cuboidTwo = new CuboidMakerTwo({
+  length: 4,
+  width: 5,
+  height: 5,
+  })
+
+
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+ console.log(cuboidTwo.volume()); // 100
+ console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
