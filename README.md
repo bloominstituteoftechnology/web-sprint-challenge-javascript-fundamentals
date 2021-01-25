@@ -26,13 +26,14 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+forEach() does not mutate the array on which it is called.(However, callback may do so)... The map() method returns an entirely new array with transformed elements and the same amount of data. 
 2. Explain the difference between a callback and a higher order function.
-
+A higher order function is a function that takes another function(s) as an argument(s) and returns a function to its callers.
 3. What is closure?
-
+Combination of a function bundled together with references to its surronding state.
 4. Describe the four rules of the 'this' keyword.
-
+new, call(), apply(),bind()
+    The 4 rules presented for determining what this in js points to boil down to one simple question: what is the calling object?
 5. Why do we need super() in an extended class?
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
