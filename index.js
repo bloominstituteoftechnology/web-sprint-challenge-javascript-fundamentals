@@ -28,10 +28,10 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(number) {
+function summation(num) {
  
-  for( let i = 0; i<=number; i++){
-    return number+=i--;
+  while(num>=0){
+    return num + num*(num-1)/2;
   }
 
  }
@@ -59,14 +59,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(){
-    let i = zooAnimals.indexOf();
-  let nameArr = zooAnimals.forEach(item =>item.animal_name);
-  let scientificArr = zooAnimals.forEach(item =>item.scientific_name);
+  function animalNames(data){
+    let i = data.indexOf();
+  let nameArr = data.forEach(data =>data[i].animal_name);
+  let scientificArr = data.forEach(data =>data[i].scientific_name);
   let stringArr = `name:${nameArr}, scientific:${scientificArr}`;
   return stringArr;
   }
-  console.log(animalNames());
+  console.log(animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -74,10 +74,13 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(data){
-    const newArray = data.filter(data =>data[item].animal_name) 
+  function lowerCaseNames(zooAnimals){
+    let i = zooAnimals.indexOf();
+    const newArray = zooAnimals.map(item =>item.animal_name) 
   
-    return newArray;
+    return newArray.map(f => {
+      return f.toLowerCase();
+    });
   }
   console.log(lowerCaseNames(zooAnimals));
   
@@ -120,26 +123,22 @@ const zooAnimals = [
   function consume(a,b,cb){
     return cb(a,b);
   }
-  console.log(consume(2,3,cb))
+  console.log(consume(2,3,add))
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(a,b,cb){
-    return function cb(a,b) {
+function add(a,b,){
       return a + b;
-    }
-  }
-console.log(add(3,5,consume))
+     }
+console.log(add(3,5,))
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(a,b,cb){
-  return function cb(a,b) {
+function multiply(a,b,){
     return a * b;
-  }
 }
-console.log(multiply(3,5,consume))
+console.log(multiply(3,5,))
   
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
