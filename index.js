@@ -58,12 +58,15 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
-  function animalNames(data){
-    let i = data.indexOf();
-  let nameArr = data.forEach(data =>data[i].animal_name);
-  let scientificArr = data.forEach(data =>data[i].scientific_name);
-  let stringArr = `name:${nameArr}, scientific:${scientificArr}`;
+ function animalNames(data){
+  let stringArr = [];
+  let newArray = data.forEach(item =>{
+    let {animal_name} = item;
+    let {scientific_name} = item;
+    animal_name = animal_name;
+    scientific_name = scientific_name;
+    stringArr.push(`name:${animal_name}, scientific:${scientific_name}`)
+  })
   return stringArr;
   }
   console.log(animalNames(zooAnimals));
