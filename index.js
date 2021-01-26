@@ -34,7 +34,6 @@ function summation(num) {
   }
  }
  console.log(summation(7));
- 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -58,11 +57,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
- function animalNames(zooAnimals){
-let index = zooAnimals.indexOf();
-let nameArr = zooAnimals.forEach(zooAnimals =>zooAnimals[index].animal_name);
-let scientificArr = zooAnimals.forEach(zooAnimals =>zooAnimals[index].scientific_name);
-let stringArr = `name:${nameArr}, scientific:${scientificArr}`;
+ function animalNames(data){
+let stringArr = [];
+let newArray = data.forEach(name =>{
+  let {animal_name} = name;
+  let {scientific_name} = name;
+  animal_name = animal_name;
+  scientific_name = scientific_name;
+  stringArr.push(`name:${animal_name}, scientific:${scientific_name}`)
+})
 return stringArr;
 }
 console.log(animalNames(zooAnimals));
