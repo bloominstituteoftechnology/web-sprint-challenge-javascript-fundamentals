@@ -26,14 +26,18 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+    - .forEach returns undefined, whereas .map returns a new array. Both pass a function onto each individual array element. forEach thus mutates the original array whereas map does not.
 2. Explain the difference between a callback and a higher order function.
-
+    - A higher order function is a function that expects other functions passed to it in arguements, where a callback is the function that is usually passed to higher order functions
 3. What is closure?
-
+    - Closure is when a variable reaches outside of its scope to find a value.
 4. Describe the four rules of the 'this' keyword.
-
+    - If a function is globally scoped and is called, this within the function will equal the window.
+    - If a function is ran with a dot preceeding it within an object, this will equal the object its contained in
+    - If a function is ran with a dot preceeding it in a function that has a constructor, the specific object will equal this
+    - If a function is called or binded, this has to be explicitly defined.
 5. Why do we need super() in an extended class?
+    - We need to pass arguements down to the class being extended through super so it can construct the extended class
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
@@ -58,17 +62,17 @@ Your finished project must include all of the following requirements
 #### Task A: Closure
 
 This challenge takes a look at closures as well as scope. 
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [X] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task B: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [X] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task C: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+* [X] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task D: Classes
 
