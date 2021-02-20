@@ -2,6 +2,7 @@
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
 
+
 const external = "I'm outside the function";
 
 function myFunction() {
@@ -13,11 +14,13 @@ function myFunction() {
   }
   nestedFunction();
 }
-myFunction();
+myFunction()
+
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 
+// The nested function can access 'internal' because of function scope and the way that JS scopes functions from the inside up, through parent child structure
 
 
 
@@ -28,11 +31,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+let number = 0
+function summation(number) {
+  return number++;
 
   }
- 
+ console.log(number)
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -67,9 +71,6 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -114,16 +115,21 @@ function add(/*Your Code Here */){
   }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
-  
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+let num1 = 2;
+let num2 = 2;  
+function multiply(){
+   return (num1 * num2)
   }
+console.log(multiply())
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
-  
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+ let name = "Nicole";
+ let name2 = "Pizzano";
+
+function greeting(){
+   return('Hello ${name }${name2}, nice to meet you!')
   }
+  console.log(greeting())
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
