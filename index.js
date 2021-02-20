@@ -114,7 +114,12 @@ console.log(names)
   function USApop(/*Your Code Here*/){
     /*Your Code Here*/
   }
-  
+   const populationTotal = zooAnimals.reduce(function(accumulator, item){
+  return accumulator + item.population;
+ },0);
+
+ console.log(`total animal population ${populationTotal}`);
+
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
