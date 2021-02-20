@@ -28,10 +28,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
-  }
+function summation(i) {
+  i = 0
+  return i + 1
+}
+summation();
+  
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,10 +58,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(){
+    return zooAnimals.forEach(`name: ${this.animal_name}, scientific name: ${this.scientific_name}`)
   }
-  
+  animalNames()
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -67,9 +69,13 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+     
+    const lowCaseAnimalNames = [];
+  zooAnimals.map(function(animal){
+    let convertLow = zooAnimals.map(function(animal){
+  lowCaseAnimalNames.push(animal.animal_name.toLocaleLowerCase());
+  })
+console.log(lowCaseAnimalNames);
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -77,10 +83,14 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+   
+  const lowPopulationAnimals = [];
+let endangered = zooAnimals.filter(function(animal){
+  return animal.population < 5;
+})
+lowPopulationAnimals.push(endangered);
+
+console.log(lowPopulationAnimals);
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -91,6 +101,12 @@ const zooAnimals = [
   function USApop(/*Your Code Here*/){
     /*Your Code Here*/
   }
+  let populationTotal = 0;
+  let popConvert = zooAnimals.reduce(function(counter, animal){
+    return counter + animal.population;
+  },0)
+populationTotal = popConvert;
+console.log(populationTotal);
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -101,8 +117,8 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    a + b = cb
   }
  
   
