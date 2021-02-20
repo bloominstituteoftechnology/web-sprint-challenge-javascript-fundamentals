@@ -29,16 +29,26 @@ myFunction()
     2. Use a counter to return the summation of that number. 
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-function summation(){
-  var nums = ['1','2','3','4','5'];
-  var total = 0;    
+// function summation(){
+//   var nums = ['1','2','3','4','5'];
+//   var total = 0;    
   
-  for(var i=0; i < nums.length; i++){
-      total = total + Number(nums[i]);
+//   for(var i=0; i < nums.length; i++){
+//       total = total + Number(nums[i]);
+//   }
+//   return(total);
+//   }
+//   console.log(summation())
+
+function summation(num){
+  let sum = 0;
+  for(let i = 1; i <= num; i ++){
+    sum += i;
   }
-  return(total);
-  }
-  console.log(summation())
+  return sum
+}
+
+console.log(summation(4))
               
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -150,8 +160,8 @@ function multiply(){
 console.log(multiply())
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
- let name = "Nice";
- let name2 = "Teacher";
+ let name = "Jane";
+ let name2 = "Doe";
 
 function greeting(){
    return(`Hello ${name} ${name2}, nice to meet you!`)
