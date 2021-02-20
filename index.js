@@ -102,10 +102,15 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
+const displayNames = [];
+const displayNames = [];
+zooAnimals.forEach((name) => {
+  displayNames.push(
+    `Name: ${name.animal_name}, Scientific: ${name.scientific_name}`
+  );
+});
 
-function animalNames(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+console.log(displayNames);
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -113,18 +118,21 @@ function animalNames(/*Your Code Here*/) {
   For example: ['jackal, asiatic', .....]
   */
 
-function lowerCaseNames(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+const animalNames = zooAnimals.map((name) => {
+  return name.animal_name.toLowerCase();
+});
+
+console.log(animalNames);
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
+const lowPopulationAnimals = zooAnimals.filter((pop) => {
+  return pop.population < 5;
+});
 
-function lowPopulationAnimals(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+console.log(lowPopulationAnimals);
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -132,9 +140,12 @@ function lowPopulationAnimals(/*Your Code Here*/) {
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-function USApop(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+const USApop = zooAnimals.reduce((acc, curr) => {
+  acc += curr.population;
+  return acc;
+}, 0);
+
+console.log(USApop);
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
 /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -144,15 +155,15 @@ function USApop(/*Your Code Here*/) {
  * The consume function should return the invocation of cb, passing a and b into cb as arguments
  */
 
-function consume(/*Your Code Here */) {
-  /*Your Code Here */
+function consume(a, b, cb) {
+  return cb(a, b);
 }
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
 
-function add(/*Your Code Here */) {
-  /*Your Code Here*/
+function add(num1, num2) {
+  return num1 + num2;
 }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
