@@ -1,7 +1,6 @@
 //🚀🚀🚀  Topic #1 Closures 🚀🚀🚀//
 /* 🚀🚀🚀🤓 Task 1: 🤓🚀🚀🚀 
 Study the code below and explain in your own words why nested function can access the variable internal. */
-.
 
 const external = "I'm outside the function";
 
@@ -20,7 +19,7 @@ myFunction()
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 
-// The nested function can access 'internal' because of function scope and the way that JS scopes functions from the inside up, through parent child structure
+// The nested function can access 'internal' because of function scope and the way that JS scopes functions from the inside up, through parent child structure. //
 
 
 
@@ -30,13 +29,17 @@ myFunction()
     2. Use a counter to return the summation of that number. 
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
-
-let number = 0
-function summation(number) {
-  return number++;
-
+function summation(){
+  var nums = ['1','2','3','4','5'];
+  var total = 0;    
+  
+  for(var i=0; i < nums.length; i++){
+      total = total + Number(nums[i]);
   }
- console.log(number)
+  return(total);
+  }
+  console.log(summation())
+              
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -60,16 +63,30 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
+  function animalNames(){
     /*Your Code Here*/
   }
-  
+  const names = [];
+  console.log(names);
+  zooAnimals.forEach(function(item){
+    console.log(names.push(`Name: ${item.animal_name}: Scientific Name: ${item.scientific_name}`))
+
+  })
+
+console.log(names)
+
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
+ const lowCaseNamess = []
+ const lowerCaseNames = zooAnimals.map(function(item){  
+   return item.animal_name.toLowerCase()
+ });
+ console.log(lowerCaseNames);
+
 
   
   
@@ -81,7 +98,12 @@ const zooAnimals = [
   function lowPopulationAnimals(/*Your Code Here*/){
     /*Your Code Here*/
   }
-  
+  const lowPopAnimals = []
+  const lowPopulationAnims = zooAnimals.filter(function(item){
+    return item.population < 5;
+  });
+ 
+  console.log(lowPopulationAnims);
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -123,13 +145,14 @@ function multiply(){
 console.log(multiply())
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
- let name = "Nicole";
- let name2 = "Pizzano";
+ let name = "Nice";
+ let name2 = "Teacher";
 
 function greeting(){
-   return('Hello ${name }${name2}, nice to meet you!')
+   return(`Hello ${name} ${name2}, nice to meet you!`)
   }
   console.log(greeting())
+
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
