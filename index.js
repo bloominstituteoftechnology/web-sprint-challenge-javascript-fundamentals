@@ -91,10 +91,12 @@ console.log(names)
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
+
  const lowCaseNamess = []
  const lowerCaseNames = zooAnimals.map(function(item){  
    return item.animal_name.toLowerCase()
  });
+
  console.log(lowerCaseNames);
 
 
@@ -139,26 +141,31 @@ console.log(names)
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
-  }
+ const consume = function(a, b, cb){
+  return cb(a, b)
+}
+const person = function(a, b){
+  return `${a} and ${b}`;
+}
+
+console.log(consume('A', 'B', person));
+
+
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
-  
-function add(/*Your Code Here */){
-    /*Your Code Here*/
-  }
+const add =
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
+
 let num1 = 2;
 let num2 = 2;  
 function multiply(){
    return (num1 * num2)
   }
 console.log(multiply())
-
+ 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
  let name = "Jane";
  let name2 = "Doe";
