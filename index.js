@@ -220,3 +220,4 @@ class CuboidMakerTwo{
     CuboidMaker,
     CuboidMakerTwo
   }
+ const abdielmora= abdielmora
