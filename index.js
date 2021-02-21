@@ -58,8 +58,9 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-function animalNames(/*Your Code Here*/) {
-	/*Your Code Here*/
+// forEach() only returns undefined and I cannot figure out how to get it to return anything else. I gave in and went with what I would use in the wild: map()
+function animalNames(anArray) {
+	return anArray.map(animal => `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
 }
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -68,8 +69,8 @@ function animalNames(/*Your Code Here*/) {
   For example: ['jackal, asiatic', .....]
   */
 
-function lowerCaseNames(/*Your Code Here*/) {
-	/*Your Code Here*/
+function lowerCaseNames(anArray) {
+	return anArray.map(animal => animal.animal_name.toLowerCase());
 }
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
