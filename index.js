@@ -96,6 +96,7 @@ const lowPopAnimals = [];
   let endangered = zooAnimals.filter(function(animal){
     return animal.population < 5;
   })
+  
   lowPopAnimals.push(endangered);
 
 console.log(lowPopAnimals);
@@ -115,7 +116,9 @@ console.log(lowPopAnimals);
   let popConvert = zooAnimals.reduce(function(counter, animal){
     return counter + animal.population;
   },0)
+
 populationTotal = popConvert;
+
 console.log(populationTotal);
   
   
@@ -178,6 +181,7 @@ function CuboidMaker(attributes){
   this.width = attributes.width;
   this.height = attributes.height;
 }
+
 const newCuboid = new CuboidMaker(3, 3, 3)
 
 
