@@ -26,7 +26,7 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(num) {
+const summation = num => {
 	let sum = 0;
 
 	for (let i = 1; i <= num; i++) {
@@ -34,7 +34,7 @@ function summation(num) {
 		sum += i;
 	}
 	return sum;
-}
+};
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -59,9 +59,7 @@ const zooAnimals = [
   */
 
 // forEach() only returns undefined and I cannot figure out how to get it to return anything else. I gave in and went with what I would use in the wild: map()
-function animalNames(anArray) {
-	return anArray.map(animal => `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
-}
+const animalNames = anArray => anArray.map(animal => `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`);
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -69,18 +67,14 @@ function animalNames(anArray) {
   For example: ['jackal, asiatic', .....]
   */
 
-function lowerCaseNames(anArray) {
-	return anArray.map(animal => animal.animal_name.toLowerCase());
-}
+const lowerCaseNames = anArray => anArray.map(animal => animal.animal_name.toLowerCase());
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-function lowPopulationAnimals(anArray) {
-	return anArray.filter(animal => animal.population < 5);
-}
+const lowPopulationAnimals = anArray => anArray.filter(animal => animal.population < 5);
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -88,9 +82,7 @@ function lowPopulationAnimals(anArray) {
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-function USApop(anArray) {
-	return anArray.reduce((total, animal) => total + animal.population, 0);
-}
+const USApop = anArray => anArray.reduce((total, animal) => total + animal.population, 0);
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
 /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
@@ -100,35 +92,28 @@ function USApop(anArray) {
  * The consume function should return the invocation of cb, passing a and b into cb as arguments
  */
 
-function consume(/*Your Code Here */) {
-	/*Your Code Here */
-}
+const consume = (a, b, cb) => cb(a, b);
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
 
-function add(/*Your Code Here */) {
-	/*Your Code Here*/
-}
+const add = (a, b) => a + b;
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
 
-function multiply(/*Your Code Here */) {
-	/*Your Code Here */
-}
+const multiply = (a, b) => a * b;
 
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
-function greeting(/*Your Code Here */) {
-	return; /*Your Code Here */
-}
+const greeting = (firstName, lastName) => `Hello ${firstName} ${lastName}, nice to meet you!`;
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
 // console.log(consume(2, 2, add)); // 4
 // console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+// console.log(consume('Mary', 'Poppins', greeting)); // Hello Mary Poppins, nice to meet you!
 
+// Completed stretch and made all functions arrow functions; not just the callbacks
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
