@@ -29,13 +29,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+        Map returnes an altered version of the original array while the forEach allows you to iterate over an array without returning an altered version of the array.  You will use map for changing each value of a given array, while forEach simplifies iterating over an array without changing its values
+
 2. Explain the difference between a callback and a higher order function.
+
+        A high-order function (HOF) is a function that returns a function, as opposed to a simple value. A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action; a callback could return a value, or a function, or nothing.
 
 3. What is closure?
 
+        A closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
 4. Describe the four rules of the 'this' keyword.
 
+        (a) 	In the global scope, the value of "this" will be the window/console Object
+
+        (b) Implicit Binding is Whenever a preceding dot calls a function, the object before 
+            the dot is “this”
+        (c) New binding whenever we use a constructor function, this refers to the specific 
+            instance of the object that is created and returned by the constructor function
+        (d) Explicit binding whenever we use JavaScript’s call or apply method, this is 
+            explicitly defined
+
+
 5. Why do we need super() in an extended class?
+
+         super() tells a parent's constructor to be concerned with the child's attributes and abstracts away the Object.create(this, Class) syntax that is trickier to understand.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
