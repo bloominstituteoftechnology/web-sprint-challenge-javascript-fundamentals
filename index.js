@@ -57,7 +57,14 @@ const zooAnimals = [
   */
 
   function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+    console.log(displayNames);
+    zooAnimals.forEach((e) => {
+    const names =`${e.animal_name}, ${e.scientific_name}`
+    return displayNames.push(names)
+    
+    })
+    // console.log(displayNames);
+    
   }
   
 
@@ -67,7 +74,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
+  function lowerCaseNames(/*Your Code Here*/){const lowCaseAnimalNames
+    console.log(lowCaseAnimalNames);
+    const lowCaseAnimalNames = zooAnimals.map((name) => {
+      return name.animal_name.toLowerCase();
+    })
+    // console.log(lowCaseAnimalNames);
     /*Your Code Here*/
   }
   
@@ -77,7 +89,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(/*Your Code Here*/){const lowPopulationAnimals
+    console.log(lowPopulationAnimals);
+    const lowPopulationAnimals = zooAnimals.filter((e) => e.population < 5)
+     console.log(lowPopulationAnimals);
+    
     /*Your Code Here*/
   }
   
@@ -88,7 +104,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
+  function USApop(/*Your Code Here*/){let populationTotal = 0;
+    let populationTotal = zooAnimals.reduce((acc, cur) => {
+      return acc + cur.population;
+      }, 0);
+    console.log(populationTotal);
     /*Your Code Here*/
   }
   
@@ -124,13 +144,18 @@ function multiply(/*Your Code Here */){
 function greeting(/*Your Code Here */){
    return /*Your Code Here */
   }
-  
+  add = (num1, num2)  =>  num1 + num2;
+multiply = (num1, num2) =>  num1 * num2;
+greeting = (firstName, lastName) => `Hello ${firstName} ${lastName}, nice to meet you!`
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
   // console.log(consume(2, 2, add)); // 4
   // console.log(consume(10, 16, multiply)); // 160
   // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
-  
+  console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+
   
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
  
@@ -143,7 +168,11 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
+function CuboidMaker(/*Your Code Here */){function CuboidMaker (length, width, height) {
+  this.length  = length; 
+  this.width = width;
+  this.height = height;  
+};
   /*Your Code Here */
 }
 
@@ -151,7 +180,9 @@ function CuboidMaker(/*Your Code Here */){
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
-
+  CuboidMaker.prototype.volume = function() {
+    return this.length * this.width * this.height;
+  } 
 
 
 
