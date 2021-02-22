@@ -125,31 +125,31 @@ USApop()
     * The first two parameters can take any argument (we can pass any value as an argument)
     * The last parameter accepts a callback
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
-  */
-
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  */function consume(num1, num2, callback) {
+  for (let i in callback) {
+    callback(callback[i]);
   }
- 
-  
+}
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
-  }
+function add () {
+  let someNumbers = num1 + num2
+  console.log(someNumbers);
+}
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(numManipulation){
+   array1.num1 * array1.num2
+   console.log(numManipulation)
   }
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
 function greeting(/*Your Code Here */){
-   return /*Your Code Here */
-  }
+   return ("Hello ${first-name} ${last-name}, nice to meet you!" );
+};
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
