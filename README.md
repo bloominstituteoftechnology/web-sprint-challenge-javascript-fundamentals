@@ -29,13 +29,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+>  .map is used to receive an array, perform a function on it, and present a new array. .map will always return the same number of items the original array had, just in a different form (like trying on new clothes or painting a house). It does not change the original array though. .forEach will return undefined and not return a new array, but can can still perform actions on each element in the array. For example, forEach can be used to console.log each element in an array, or save an array to a database, while .map can be used to return an array that has been filtered, reduced, etc.
+
 2. Explain the difference between a callback and a higher order function.
+
+> A callback is a function that can feed into a higher order function. A higher order function is a function that can return another function.
 
 3. What is closure?
 
+> A closure is an inner function that has access to an outer function's data. A closure can read everything above it, but nothing above it can read the closure.It is like a small animal that can fit outside of its little hole, but nothing is small enough to reach inside. 
+
 4. Describe the four rules of the 'this' keyword.
 
+> 1. Is the function called by new?: an empty object is created and referenced by the 'this' keyword. it is later returned if no other object is returned explicitly. 
+2. Is the function called by call(), apply(), bind()? (explicit binding): sets context to what the 'this' keyword refers to, forces the function to use a specific object for this binding. 
+3. Is the function called as a method? (implicit binding): 'this' will refer to the the "closest" call site (whether that be inside of the function or globally depending on how it is arranged)
+4. Is the function called in the global scope?: this has the lowest priority. if 1-3 are not applicable, the function will be called according to the global (window) scope.
+
 5. Why do we need super() in an extended class?
+
+> super() is somewhat similar to semantic html in the sense it explicitly does what is implicitly stated. It is used to call the constructor, methods, and properties of the parent class. super() can be used in a subclass to access parent class values otherwise overwritten by a subclass
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
