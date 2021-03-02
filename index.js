@@ -155,8 +155,10 @@ function lowerCaseNames(anArray) {
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-function lowPopulationAnimals(/*Your Code Here*/) {
+let lowPop = [];
+function lowPopulationAnimals(anArray) {
   /*Your Code Here*/
+  lowPop = anArray.filter((item) => item.population > 5);
 }
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
