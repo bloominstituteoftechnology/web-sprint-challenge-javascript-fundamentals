@@ -127,8 +127,8 @@ const zooAnimals = [
 
 let displayNames = [];
 
-function animalNames(arr) {
-  zooAnimals.forEach((item, index, arr) =>
+function animalNames(anArray) {
+  anArray.forEach((item, index, arr) =>
     displayNames.push(
       `name: ${arr[index].animal_name}, scientific: ${arr[index].scientific_name}`
     )
@@ -141,9 +141,13 @@ function animalNames(arr) {
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
-
-function lowerCaseNames(/*Your Code Here*/) {
+let strings = [];
+function lowerCaseNames(anArray) {
   /*Your Code Here*/
+  anArray.forEach((item, index, arr) =>
+    strings.push(arr[index].animal_name.toLowerCase())
+  );
+  return strings;
 }
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
