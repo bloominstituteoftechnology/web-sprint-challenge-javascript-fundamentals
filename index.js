@@ -155,10 +155,10 @@ function lowerCaseNames(anArray) {
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-let lowPop = [];
 function lowPopulationAnimals(anArray) {
   /*Your Code Here*/
-  lowPop = anArray.filter((item) => item.population > 5);
+  const newArray = anArray.filter((item) => item.population > 5);
+  return newArray;
 }
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -167,8 +167,11 @@ function lowPopulationAnimals(anArray) {
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-function USApop(/*Your Code Here*/) {
+function USApop(anArray) {
   /*Your Code Here*/
+  anArray.reduce((reducePop, item) => {
+    return reducePop + item.population;
+  }, 0);
 }
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
