@@ -157,7 +157,7 @@ function lowerCaseNames(anArray) {
 
 function lowPopulationAnimals(anArray) {
   /*Your Code Here*/
-  const newArray = anArray.filter((item) => item.population > 5);
+  const newArray = anArray.filter((item) => item.population < 5);
   return newArray;
 }
 
@@ -169,9 +169,10 @@ function lowPopulationAnimals(anArray) {
 
 function USApop(anArray) {
   /*Your Code Here*/
-  anArray.reduce((reducePop, item) => {
+  let newPop = anArray.reduce(function (reducePop, item) {
     return reducePop + item.population;
   }, 0);
+  return newPop;
 }
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
@@ -182,27 +183,29 @@ function USApop(anArray) {
  * The consume function should return the invocation of cb, passing a and b into cb as arguments
  */
 
-function consume(/*Your Code Here */) {
+function consume(a, b, cb) {
   /*Your Code Here */
+  return cb(a, b);
 }
 
 /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
 // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
 
-function add(/*Your Code Here */) {
+function add(a, b) {
   /*Your Code Here*/
+  return a + b;
 }
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
 
-function multiply(/*Your Code Here */) {
-  /*Your Code Here */
+function multiply(a, b) {
+  return a * b;
 }
 
 // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
 
-function greeting(/*Your Code Here */) {
-  return; /*Your Code Here */
+function greeting(a, b) {
+  return `Hello ${a} ${b}, nice to meet you!`;
 }
 
 // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁
