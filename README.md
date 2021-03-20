@@ -29,13 +29,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+forEach behaves like for loop, but is most useful on smaller arrays due to memory capacity. forEach does not need "return" within it's function; However, it does need an empty array to push what is written in code -unlike forMap, which doesn't
+
 2. Explain the difference between a callback and a higher order function.
+
+Callback uses the functions' parameter of its other functions as arguments while HOF connects through heirarchy where the highest function can access all other functions below, but it cannot be done from the lowest to the highest.
 
 3. What is closure?
 
+Closure is when a function inside a function is trying to access a function or value that is not within its scope and then must go 'outside of its scope' to retrieve what is needed
+
 4. Describe the four rules of the 'this' keyword.
 
+1 - this can be referred to what is to the left of a dot notation, 2 - if this isn't binding or referring to anything, it will yield window which is not good, 3 - avoiding using this alone, 4 - this can explicitly bind through call, apply, and bind
+
 5. Why do we need super() in an extended class?
+
+If using a constructor function and including a child, super() is like when a child 'calls' their parent and inherits their attributes. Without super(), the child class cannot inherit from the parent
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
