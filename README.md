@@ -29,13 +29,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.forEach method affects and changes array. .map creats a new array leaving the old one alone.
+
 2. Explain the difference between a callback and a higher order function.
+
+higher-order: function that takes another function as an argument and/or returns a function to what calls to it
+
+callback: function that is passed down to another function when called to
 
 3. What is closure?
 
+Using a function inside of a function then calling to the inner function from the outer function
+
 4. Describe the four rules of the 'this' keyword.
 
+when "new" is used when calling the function, "this" inside the function is a new object
+
+when using "apply, call, or bind", "this" inside the function is he object passed as the argument
+
+when using dot notation "this" is the object to the left of the dot
+
+when none of the previous principles are followed "this" will be the window/console Object
+
 5. Why do we need super() in an extended class?
+
+Need it to wipe the defined data from the copied function
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 

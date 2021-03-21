@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+Using closure to call to internal in myFunction allows nestedFunction to use internal. 
 
 
 
@@ -28,9 +28,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  var total = 0;
+  for(var i = 1; i <= number; i++){
+    total += i;
+  }
+return total;
   }
  
 
@@ -56,8 +59,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(zooAnimals){
+    zooAnimals.forEach(function(index) {
+for()
+    })
   }
   
 
