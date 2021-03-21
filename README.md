@@ -45,7 +45,7 @@ Closure is when a function inside a function is trying to access a function or v
 
 5. Why do we need super() in an extended class?
 
-If using a constructor function and including a child, super() is like when a child 'calls' their parent and inherits their attributes. Without super(), the child class cannot inherit from the parent
+If using a constructor function and including a child, super() is like when a child 'calls' their parent and inherits their attributes. Without super(), the child class cannot inherit from the parent.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
