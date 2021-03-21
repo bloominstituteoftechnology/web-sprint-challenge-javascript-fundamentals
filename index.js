@@ -211,7 +211,7 @@ class CuboidMakerTwo {
   }
 }
 
-let cuboidTwo = new CuboidMakerTwo(4, 5, 5)
+let cuboidTwo = new CuboidMakerTwo(4, 5, 5) 
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
