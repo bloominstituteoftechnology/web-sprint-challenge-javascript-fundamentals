@@ -26,15 +26,15 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+foreach method affects and changes arrays, map creates a new array leaving out the old one
 2. Explain the difference between a callback and a higher order function.
-
+higherorder takes another function as an argument while callback references an old function
 3. What is closure?
-
+using a function in a function then calling to the inner function from outside
 4. Describe the four rules of the 'this' keyword.
-
+new, apply, call, bind
 5. Why do we need super() in an extended class?
-
+to wipe the defined data from the copied function
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
