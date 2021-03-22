@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+Both nestedFunction and internal are within the function myfunction, so they are within the same scope.
 
 
 
@@ -28,10 +28,21 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sums = [];
+  for (let i = 1; i <= number; i++){
+    sums.push(i);
+    if (i === number) {
+      let sumthing = sums[0] + sums[1] + sums[2] + sums[3];
+      console.log(sumthing)
+    }
   }
+};
+
+
+summation(4)
+
+THIS IS NOT DONE STILL WORKING ON it.
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
