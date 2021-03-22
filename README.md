@@ -29,6 +29,8 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+I cannot complete these tasks. 
+
 2. Explain the difference between a callback and a higher order function.
 
 3. What is closure?
