@@ -110,9 +110,13 @@ console.log(lowPopulationAnimals());
   */
 
 function USApop() {
-  
+  let x = zooAnimals.reduce(function(total, item) {
+    return total + item.population;
+  }, 0)
+  return x;
 }
   
+console.log(USApop());
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
