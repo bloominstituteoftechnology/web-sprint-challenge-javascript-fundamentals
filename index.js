@@ -123,6 +123,7 @@ const zooAnimals = [
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
 function add(a,b){
+  console.log(a+b)
     return a+ b;
   }
 
