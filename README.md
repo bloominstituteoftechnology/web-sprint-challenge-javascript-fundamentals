@@ -29,13 +29,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.map() returns a new array, whereas .forEach() manipulates the original array and does not return a new array.
+
 2. Explain the difference between a callback and a higher order function.
+
+A HOF takes in cb functions. Callbacks get passed into HOF's.
 
 3. What is closure?
 
+Closure is mental health for JavaScript. :D It is simply the ability to function. It has to do with scope. Things on the global scope can be used from the insides of functions, but the reverse is not true. Something outside of a function cannot use something from inside of a function. 
+
 4. Describe the four rules of the 'this' keyword.
 
+Global, new, implicit, explicit. These have to do with how the classes and prototypes are manipulated. I forgot the eact details on how to word an exaplanation. I will try to add this in the next commit.
+
 5. Why do we need super() in an extended class?
+
+In "Classes" "Super()" takes the place of ".call" in "prototypes."
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
