@@ -5,11 +5,11 @@ Study the code below and explain in your own words why nested function can acces
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
+  // console.log(external);
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    console.log(internal);
+    // console.log(internal);
   }
   nestedFunction();
 }
@@ -32,7 +32,6 @@ function summation(howMany) {
   for (let i = 0; i <= howMany; i++) {
     sum = sum + i;
   }
-  console.log(sum);
   return sum
 }
 summation(4)
@@ -59,10 +58,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(list){
+    let names = [];
+    list.forEach (function(item) {
+      names.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+    })
+    return names;
   }
-  
+  animalNames(zooAnimals)
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -70,10 +73,10 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(list){
+    return list.map(i => i.animal_name.toLowerCase())
   }
-  
+  lowerCaseNames(zooAnimals)
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
