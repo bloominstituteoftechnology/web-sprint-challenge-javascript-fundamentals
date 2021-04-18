@@ -16,10 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
-//A closure is an inner function that has access to an outer function's data. The constant variable internal is not nested within the function nestedFunction, it is nested within myFunction (the outer function), but because of closures, nestedFunction (the inner function) has access to the variable. I understand closures as instances in which an object has access to everything above it, but not vice versa.
-
-
+  //A closure is an inner function that has access to an outer function's data. The constant variable internal is not nested within the function nestedFunction, it is nested within myFunction (the outer function), but because of closures, nestedFunction (the inner function) has access to the variable. I understand closures as instances in which an object has access to everything above it, but not vice versa. Inner functions nested inside bigger functions can "reach upwards" and reference "less" nested variables.
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
