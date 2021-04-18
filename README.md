@@ -28,14 +28,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+foreach manipulates the existing array, map creates a new array
 
 2. Explain the difference between a callback and a higher order function.
+higher order functions accept callback functions
 
 3. What is closure?
+making sure all variables and function calls are in scope with the parent object
 
 4. Describe the four rules of the 'this' keyword.
+there are 4 different types of binding for this: global, implicit, new and explicit
 
 5. Why do we need super() in an extended class?
+to make sure the values of the parent class are assigned in the child
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
