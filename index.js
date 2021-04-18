@@ -55,7 +55,10 @@ const zooAnimals = [
   */
 
   function animalNames(displayNames){
-    /*Your Code Here*/
+    let newArray = [];
+    for(let i=0; i < displayNames.length; i++){
+      if
+    }
   }
   
 
