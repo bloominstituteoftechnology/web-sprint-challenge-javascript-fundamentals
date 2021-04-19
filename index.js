@@ -75,8 +75,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(){
+    let x = [];
+    zooAnimals.map(function(item) {
+      x.push(item.animal_name.toLowerCase());
+    })
+    return x;
   }
   
   
@@ -85,8 +89,12 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(){
+    let x = []
+    zooAnimals.filter(function(item) {
+      x.push(item);
+    })
+    return x;
   }
   
 
