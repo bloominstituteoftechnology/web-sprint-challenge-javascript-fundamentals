@@ -49,23 +49,30 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-    const displayNames = [];
-    zooAnimals.forEach(zooAnimal => displayNames.push(`name: ${zooAnimal.animal_name}, scientific: ${zooAnimal.scientific_name}`));
-    /*test*/ console.log(displayNames)
+    function animalNames() {
+      const displayNames = [];
+      zooAnimals.forEach(zooAnimal => displayNames.push(`name: ${zooAnimal.animal_name}, scientific: ${zooAnimal.scientific_name}`));
+      return displayNames;
+    }
+    /*test*/ console.log(animalNames)
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
-    const lowerCaseNames = zooAnimals.map(x => x["animal_name"].toLowerCase());
+    function lowerCaseNames () {
+      return zooAnimals.map(x => x["animal_name"].toLowerCase());
+    }
     /*test*/ console.log(lowerCaseNames);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
-    const lowPopulationAnimals = zooAnimals.filter(zooAnimal => zooAnimal.population < 5);
+    function lowPopulationAnimals () {
+      return zooAnimals.filter(zooAnimal => zooAnimal.population < 5);
+    }
     console.log(lowPopulationAnimals);
   
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -74,14 +81,10 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(zooAnimals){
-    const popControl = population.reduce(function(previousValue, currentValue) {
-      return {
-        total_population: previousValue.population + currentValue.population
-      }
-    });
-  return popControl; }
-  console.log(USApop(zooAnimals)); 
+  function USApop () {
+    return zooAnimals.reduce((accumulator, currentValue) => accumulator + zooAnimals["population"], 0 )
+  }
+  console.log(USApop)
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -91,10 +94,9 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
     * The last parameter accepts a callback
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
-
- function consume(a, b, cb) {
-  return cb(a, b);
-}
+  function consume(a, b, cb) {
+    return cb(a, b);
+  }
 
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
