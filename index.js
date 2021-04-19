@@ -57,7 +57,8 @@ const zooAnimals = [
   function animalNames(displayNames){
     let newArray = [];
     for(let i=0; i < displayNames.length; i++){
-      if
+      newArray.forEach('${"name: {name}, ${scientific: {scientific name}');
+      return newArray;
     }
   }
   
@@ -69,7 +70,10 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(arr){
-    let newArray = []
+    let newArray = [];
+    for(let i=0;i < arr.length; i++){
+      newArray.map()
+    }
   }
   
   
@@ -102,7 +106,7 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
+  function consume(a, b, cb){
     /*Your Code Here */
   }
  
@@ -144,9 +148,13 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(length, width, height){
+ this.length = length;
+ this.width = width;
+ this.height = height;
+ this.object = [];
 }
+
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
