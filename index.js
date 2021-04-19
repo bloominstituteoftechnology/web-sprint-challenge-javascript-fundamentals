@@ -17,6 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+// 'nestedFunction' can access the variable 'internal' because of the lexical scope. Lexical means that we can pass information down into another function. 'nestedFunction' is inside of 'myFunction' where the 'internal' variable was created. Thus giving the 'nestedFunction' access to everything within 'myFunction'.
 
 
 
@@ -99,9 +100,11 @@ console.log(lowPopulationAnimals);
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+ let populationTotal = zooAnimals.reduce(function(accum, item){
+  return accum + item.population;
+}, 0)
+
+console.log(populationTotal);
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -112,35 +115,35 @@ console.log(lowPopulationAnimals);
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
-  }
+ function consume(a, b, callback){
+  return callback(a, b);
+}
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
-  }
+ function add(c, d){
+  return c + d;
+}
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
-  }
+function multiply (c, d){
+  return c * d;
+}
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
-  }
+ function greeting (fname, lname){
+  return `Hello ${fname}${lname}, nice to meet you!`;
+}
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-  // console.log(consume(2, 2, add)); // 4
-  // console.log(consume(10, 16, multiply)); // 160
-  // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+   console.log(consume(2, 2, add)); // 4
+   console.log(consume(10, 16, multiply)); // 160
+   console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
   
   
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
@@ -154,9 +157,14 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
-}
+var summation = (function () {
+  var counter = 0;
+  return function () {counter += 1; return counter}
+})();
+
+console.log(summation());
+console.log(summation());
+console.log(summation());
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
@@ -164,7 +172,9 @@ function CuboidMaker(/*Your Code Here */){
   Formula for cuboid volume: length * width * height   */
 
 
-
+  CuboidMaker.prototype.surfaceArea = function (){
+    return 2 * (length * width + length * height + width * height);
+  }
 
 
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
