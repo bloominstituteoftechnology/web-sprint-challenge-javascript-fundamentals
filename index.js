@@ -59,7 +59,7 @@ const zooAnimals = [
   function animalNames(/*Your Code Here*/){
     /*Your Code Here*/
   }
-  
+  adam
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
