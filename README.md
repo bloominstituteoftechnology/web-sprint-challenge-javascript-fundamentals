@@ -28,15 +28,15 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+    .forEach runs a function for each element for every array element. .map allows you to edit each array element.
 2. Explain the difference between a callback and a higher order function.
-
+    A callback is referred by other functions through its arguments and can run after it has been called by another function. Higher order function is a function that adds another function to its argument or can return a function.
 3. What is closure?
-
+    Closure is when all of the javascript functions and variables work correctly without errors
 4. Describe the four rules of the 'this' keyword.
-
+    Calling this by new. Calling this by apply, call, or bind. Calling this in the global scope. Calling this as a method.
 5. Why do we need super() in an extended class?
-
+    super calls the parent constructor and gains its properties.
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
