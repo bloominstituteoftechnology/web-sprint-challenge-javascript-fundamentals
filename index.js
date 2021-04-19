@@ -181,16 +181,24 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 console.log(cuboidTwo.volume()); // 100
 console.log(cuboidTwo.surfaceArea()); // 130
 
+// 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪  
 
+/* yeah idk whats going on here but i tried */
+class CubeMaker extends CuboidMaker {
+constructor (length){
+  super(length, length, length)
+}
+  volume(){
+    return this.length * this.width * this.height;
+}
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
+}
 
-
-
-// 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
-  
-
-
-
-
+const Cubey = new CubeMaker (5);
+console.log(Cubey.volume);
+console.log(Cubey.surfaceArea);
 
   /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
   function foo(){
