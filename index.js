@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+The nested function can access the variable internal because it is declared within the myFunction local scope.
 
 
 
@@ -56,9 +56,6 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁

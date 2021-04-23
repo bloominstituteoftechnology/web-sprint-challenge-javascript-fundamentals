@@ -30,9 +30,9 @@ Edit this document to include your answers after each question. Make sure to lea
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
 2. Explain the difference between a callback and a higher order function.
-
+    A callback function is nested inside of an higher function.
 3. What is closure?
-
+    A closure is a 
 4. Describe the four rules of the 'this' keyword.
 
 5. Why do we need super() in an extended class?
