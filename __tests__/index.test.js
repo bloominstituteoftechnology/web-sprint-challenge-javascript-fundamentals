@@ -16,11 +16,18 @@ const zooAnimals = [
       return num1 + num2;
   }
 
+  const print = function(num1, num2){
+    return `you gave me ${num1} + ${num2}`;
+}
+
 //closures
 describe('summation', ()=>{
     it('summation returns a number', ()=>{
         expect(functions.summation(4)).toBe(10);
     })
+    it('summation returns a number', ()=>{
+      expect(functions.summation(10)).toBe(55);
+  })
 });
 
 //callbacks and array methods
@@ -93,6 +100,9 @@ describe('consume', ()=>{
     it('consume returns a number or string', ()=>{
         expect(functions.consume(2, 5, add)).toBe(add(2, 5));
     })
+    it('consume returns a number or string', ()=>{
+      expect(functions.consume(2, 5, print)).toBe('you gave me 2 + 5');
+  })
 });
 
 describe('add', ()=>{
