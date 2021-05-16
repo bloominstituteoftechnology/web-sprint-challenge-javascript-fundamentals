@@ -92,9 +92,12 @@ console.log(lowercase);
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function lowPopulationAnimals(arr){
+    const lowpop = arr.filter((a) => {return a.population < 5;})
+    console.log(lowpop);
+   }
+ 
+ lowPopulationAnimals(zooAnimals)
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -103,9 +106,13 @@ console.log(lowercase);
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function USApop(arr){
+    const thing = arr.map((a) => {return a.population;})
+    const otherthing = thing.reduce((a, b) => a + b, 0);
+     console.log(otherthing)
+   }
+ 
+ USApop(zooAnimals)
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
