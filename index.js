@@ -66,7 +66,7 @@ function animalNames(zooAnimals) {
     displayNames.push(`name: ${x.animal_name}, scientific: ${x.scientific_name}`)
     console.log(displayNames)
   })
-  return animalNames(zooAnimals);
+  return displayNames;
 }
 
 
