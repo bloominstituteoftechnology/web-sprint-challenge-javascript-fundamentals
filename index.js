@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+Because nestedFunction is within the scope of the function myFunction and so is the variable internal so nestedFunction can access other variables inside the function.
 
 
 
@@ -28,10 +28,16 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+const sum = [];
+function summation(num) {
+  for(let i = 0; i <= num; i++){
+   sum.push(i);
   }
+ let thing = sum.reduce((a, b) => a + b, 0);
+console.log(thing);
+  }
+
+summation(4)
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,9 +62,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  const displayNames = [];
+
+  function animalNames(arr){
+    arr.forEach((b) => {displayNames.push(`Name: ${b.animal_name}, Scientific: ${b.scientific_name}`);});
   }
+
+animalNames(zooAnimals);
+console.log(displayNames)
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -67,9 +78,13 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  const lowercase = [];
+  function lowerCaseNames(arr){
+    arr.map((a) => {lowercase.push(a.animal_name.toLowerCase())});
+    }
+
+lowerCaseNames(zooAnimals)
+console.log(lowercase);
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
