@@ -29,13 +29,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.forEach executes a function on each element in the array, while .map does the same thing except it also creates another array with the results
+
 2. Explain the difference between a callback and a higher order function.
+
+Callback functions are the functions used in the higher order functions. Higher order functions take in another function(s)
 
 3. Can you explain what a closure is and how you used it in the counter function? 
 
+Closure is the boundry of control for certain operations you want to perform in Java Script. When you create a closure, you limit the scope that the operations or functions can be accessed.
+
 4. Describe the four principles of the 'this' keyword.
 
+First is window binding. This will bind to the window when not in a closure.
+Second is when a dot function is called this is the object before the dot. Implicit Binding.
+Third is new binding and it refers to the creation of new objects returned by the constructor function.
+Fourth is Explicit binding and this is used when call or apply method is used.
+
 5. Why do we need super() in an extended class?
+
+It gives access to the parent properties and methods.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
