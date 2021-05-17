@@ -18,7 +18,7 @@ myFunction();
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
 
-
+// Nested function can access the variable because of the fact that it is located inside the myFunction scope. 
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
