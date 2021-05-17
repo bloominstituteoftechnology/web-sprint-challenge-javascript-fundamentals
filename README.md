@@ -30,15 +30,31 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
-   `.forEach is
+   - .forEach is for a specific operation that needs each item to be processed.
+   - .map function does the specific operation and can change each item to return a new array of the new information or items.
 
 2. Explain the difference between a callback and a higher order function.
 
+   - callback function is taking a function and allowing it to be passed to another function. Essentially allows one function to be called another.
+   - higher order function is a funciton that receives another function as an argument or can return said function as a value.
+
 3. Can you explain what a closure is and how you used it in the counter function?
+
+   - a closure is a way to gain access to an outer function from an inner function. It is used when wanting to make adjustments to an objects properties.
 
 4. Describe the four principles of the 'this' keyword.
 
+   - Implicit Binding - when using a period (.) with your function, this refers to everything in the object before the period(.)
+
+   - Explicit Binding - specifies the object within the first parameter, .call() or .bind(), creates a new funciton that when called, has 'this' as the keyword to the value
+
+   - New Binding - in creating a constructor function, 'this' allows it to be known that the information pertains to the newly created object you are referencing.
+
+   - Global / Web Binding - The global binding is the scope for a whole webpage for which all of the code is being executed for.
+
 5. Why do we need super() in an extended class?
+
+   - We need super() in an extended class because if you need to pull informatoin from a parent constructor, to a child constructor, this function tells it to do so.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -64,19 +80,19 @@ Your finished project must include all of the following requirements
 
 This challenge takes a look at closures as well as scope.
 
-- [ ] Find this challenge in the index.js file. Read the instructions carefully!
+- [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task B: Objects and Arrays
 
 Test your knowledge of advanced array methods and callbacks.
 
-- [ ] Find this challenge in the index.js file. Read the instructions carefully!
+- [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task C: Prototypes
 
 Create constructors, bind methods, and create cuboids in this prototypes challenge.
 
-- [ ] Find this challenge in the index.js file. Read the instructions carefully!
+- [x] Find this challenge in the index.js file. Read the instructions carefully!
 
 #### Task D: Classes
 
