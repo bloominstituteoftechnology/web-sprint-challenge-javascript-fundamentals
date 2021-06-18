@@ -111,12 +111,20 @@ console.log(displayNames);
   Using USApop find the total population from the zoos array using the .reduce() method. 
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
-
+/*
   function USApop(/*Your Code Here*/){
     /*Your Code Here*/
   }
+  */
   
+  const USApop = zooAnimals.reduce((total, state) =>{
+    let sum = total + state.population;
+    return sum;
+  },0);
   
+  console.log(USApop);
+
+
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
     * Use the higher-order function consume with 3 parameters: a, b and cb
