@@ -30,9 +30,9 @@ In this case, "nestedFunction" is able to access the variable "internal" because
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(6) {
-  let counter = 0;
-
-  }
+  for (let counter = 1; counter < 5; counter++;)
+  console.log(counter);
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -138,28 +138,39 @@ function animalNames(names){
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(callback){
+    const letters = ['a','b'];
+    const newLetters =['cb'];
+    callback(newLetters);
   }
  
+  console.log(consume(callback))
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
-  
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+const add = (x, y) => x + y;
+const multiply = (x, y) => x * y;
+
+function add(fn, x, y){
+    return (x, y);
   }
 
-// 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
-  
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
-  }
+function multiply(fn, x, y){
+    return (x,y);
+}
 
+  var addResult = numbers(add, 6, 8)
+  var multiplyResult = numbers(multiply, 6, 8)
+
+  
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(attributes){
+  this.firstname = attributes.firstname;
+  this.lastname = attributes.lastname;
+  this.speak = function(){
+    return `Hello ${firstname} ${lastname}, nice to meet you!`;
+    };
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
