@@ -17,6 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+In this case, "nestedFunction" is able to access the variable "internal" because the "nestedFunction" within the "myFunction" uses console.log to access the argument declaring the variable "internal" in the preceding function.
 
 
 
@@ -28,8 +29,8 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
+function summation(6) {
+  let counter = 0;
 
   }
  
@@ -56,10 +57,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(){
+    
   }
-  
+  const animalNames = [];
+  zooAnimals.forEach(function(item){
+  return animalNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);       
+})
+
+console.log(animalNames);
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
