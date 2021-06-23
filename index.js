@@ -113,11 +113,13 @@ function add(/*Your Code Here */){
     /*Your Code Here*/
   }
 
+
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
 function multiply(/*Your Code Here */){
    /*Your Code Here */
   }
+
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
@@ -125,18 +127,12 @@ function greeting(/*Your Code Here */){
    return /*Your Code Here */
   }
   
+  
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
   // console.log(consume(2, 2, add)); // 4
   // console.log(consume(10, 16, multiply)); // 160
   // console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
-  
-  
-// 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
- 
-
-
-
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
@@ -203,10 +199,11 @@ class CuboidMakerTwo{
 
   /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
   function foo(){
-    //console.log('its working');
+    console.log('its working');
     return 'bar';
   }
-  export default{
+  foo();
+  module.exports = {
     foo,
     summation,
     animalNames,

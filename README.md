@@ -2,14 +2,11 @@
 
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
-This challenge allows you to practice the concepts and techniques learned over the past week and apply them in project. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied array methods, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a survey of JavaScript problems.
+This challenge allows you to practice the concepts and techniques learned over the past week and apply them in project. This Sprint explored JavaScript Fundamentals. During this Sprint, you studied array methods, this keyword, prototypes, and class syntax. In your challenge this week, you will demonstrate proficiency by completing a range of JavaScript problems.
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
 
 You are not allowed to collaborate during the sprint challenge. 
-
-_You have **three hours** to complete this challenge. Plan your time accordingly._
-
 
 ## Introduction
 
@@ -19,7 +16,7 @@ In meeting the minimum viable product (MVP) specifications listed below, you sho
 
 ### Commits
 
-Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons) and your team lead as the evaluate your solution.
+Set up codegrade early and commit your code regularly and meaningfully. 
 
 ## Interview Questions
 ### (please edit this file and write your answer below each question. In addition, you may also review these questions with your mentor)
@@ -41,49 +38,40 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ## Instructions
 
-### Task 1: Project Set Up
+### Task 1: Set up Project
 
-Follow these steps to set up your project:
+Using VSCode and Command Line:
+
 
 1. Fork the repo
 2. Clone your forked version of the repo
 3. cd into your repo and create a branch with your first and last name
-NOTE: Tests will run for the JavaScript portion of this challenge only
 4. open the terminal in your vs code and type `npm install`
-5. next type `npm run test:watch` in your terminal
+5. next type `npm run test` in your terminal
 6. Complete your work making regular commits, once you have all your tests passing and you are ready to submit your work please see canvas for instructions on how to submit
 
-### Task 2: Project Requirements
+### Testing & Debugging
 
-Your finished project must include all of the following requirements
+Open a second terminal inside of your project by clicking on the split terminal icon
+![alt text](assets/split_terminal.png "Split Terminal")
 
-#### Task A: Closure
+Inside of your second terminal type `npm start` 
+![alt text](assets/npm_start.png "type npm start")
 
-This challenge takes a look at closures as well as scope. 
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
+You will be running your tests in one terminal and debugging in the other. As you work on your code you should make use of `console.log` to check your progress and debug.
+![alt text](assets/tests_debug_terminal_final.png "your terminal should look like this")
 
-#### Task B: Objects and Arrays
+### Task 2: Project Requirements (MVP)
 
-Test your knowledge of advanced array methods and callbacks.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
-
-#### Task C: Prototypes
-
-Create constructors, bind methods, and create cuboids in this prototypes challenge.
-* [ ] Find this challenge in the index.js file. Read the instructions carefully!
-
-#### Task D: Classes
-
-Once you have completed the prototypes challenge, it's time to convert all your hard work into classes.
-* Find this challenge in the index.js file. Read the instructions carefully!
+You must complete all tasks inside of `index.js` and answer the questions above.
 
 In your solutions, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
-### Task 3: Stretch Goals 
-
-There are a few stretch problems found throughout the files, don't work on them until you are finished with MVP requirements! Please remember to comment out your stretch goals before you submit 
+## Resources
+ 
+ [Sprint Challenge Study Guide](https://www.notion.so/lambdaschool/Unit-1-Sprint-3-Study-Guide-033a9a00659a4ef98c12eb97e49a6110)
 
 ## Submission format
 
-See Canvas for submission instructions 
+Please submit your project via codegrade by following [these instructions](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
 

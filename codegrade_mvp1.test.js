@@ -1,4 +1,4 @@
-import functions from '../index';
+import functions from './index';
 const zooAnimals = [
     { animal_name: "Jackal, asiatic", population: 5, scientific_name: "Canis aureus", state: "Kentucky" },
     { animal_name: "Screamer, southern", population: 1, scientific_name: "Chauna torquata", state: "Alabama" },
