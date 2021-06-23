@@ -24,7 +24,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
-1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
 2. Explain the difference between a callback and a higher order function.
 
