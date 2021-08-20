@@ -28,15 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(number1) {
+function summation() {
     /*Your Code Here*/
-    // const number1 = number;
-    for (let i = 0; i <= number1; i++) {
-        i += i;
-    }
-    return number1;
+    let sum = 0
+    let number1 = 0
+    for (let i = 0; i <= number1; i++, sum += i);
 }
-
+console.log(summation(10));
 
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -61,16 +59,16 @@ Use animalNames to populate and return the displayNames array with only the anim
 displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
 */
 
-function animalNames(displayNames, name, scientific_name) {
+function animalNames(displayNames) {
     /*Your Code Here*/
     displayNames = [];
-    for (let i = 0; i < zooAnimals.length; i++) {
-        displayNames.push["name:", `${name}`, "scientific:", `${scientific_name}`];
-        console.log(displayNames[i]);
-    }
-    return displayNames[]
-}
+    zooAnimals.forEach(function(item) {
+        displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+        return displayNames[`name: ${item.animal_name}, scientific: ${item.scientific_name}`];
+    })
+    console.log(displayNames);
 
+}
 
 /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
 The zoo needs a list of all their animal's names converted to lower case. 
@@ -78,12 +76,13 @@ Using lowerCaseNames use .map() to create a new array of strings with the animal
 For example: ['jackal, asiatic', .....]
 */
 
-function lowerCaseNames(animal_name) {
+function lowerCaseNames() {
     /*Your Code Here*/
-    for (let i = 0; i < zooAnimals.length; i++) {
-        zooAnimals.map(animal_name);
-    }
-    return animal_name[i].toLowerCase();
+    let arrayLc = zooAnimals.map(function(item) {
+        return arrayLc.toLowerCase(`${item.animal_name}`);
+    });
+
+    console.log(arrayLc);
 }
 
 
@@ -92,8 +91,11 @@ The zoo is concerned about animals with a lower population count.
 Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
 */
 
-function lowPopulationAnimals( /*Your Code Here*/ ) {
+function lowPopulationAnimals(lowPop) {
     /*Your Code Here*/
+    lowPop = zooAnimals.filter(function(item) {
+        return item.population < 5;
+    })
 }
 
 
@@ -103,8 +105,11 @@ Using USApop find the total population from the zoos array using the .reduce() m
 Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
 */
 
-function USApop( /*Your Code Here*/ ) {
+function USApop(totalPop) {
     /*Your Code Here*/
+    totalPop = zooAnimals.reduce(function(acc, item) {
+        return acc + item.population;
+    }, 0);
 }
 
 
