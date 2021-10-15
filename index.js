@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+// the nested functions works because it is reaching outside the function to use the variable "Internals". The function "nestedFunction"'s purpose is to log/run a variable that is not found inside of itself.
 
 
 
