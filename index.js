@@ -58,16 +58,15 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
+  // const displayNames = [];
 
   function animalNames(animal_name, scientific_name){
     zooAnimals.forEach(animalNames(item){
-      console.log(item.animal_name);
-      console.log(item.scientific_name);
+      displayNames.push(item.animal_name)
     });
-  }
+   }
 
-  const displayNames = [];
-  console.log(animalNames);
+   console.log(displayNames);
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -75,10 +74,12 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(animal_name){
+    const lowerCaseNames = zooAnimals.map(function(item){
+      return item.animal_name.toLowerCase();
+    });
   }
-  
+  console.log(lowerCaseNames);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -88,6 +89,11 @@ const zooAnimals = [
   function lowPopulationAnimals(/*Your Code Here*/){
     /*Your Code Here*/
   }
+  const lowPopulationAnimals = zooAnimals.filter(function(item){
+    return item.population < 5;
+  });
+
+  console.log(lowPopulationAnimals);
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
