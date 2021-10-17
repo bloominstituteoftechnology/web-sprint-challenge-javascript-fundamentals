@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+//When a function has closure it becomes its own little world. When you call a variable inside a function the function looks internally for definitions first and then it looks outward. That is why closures are important. If you want a specific variable named and called just in one function it is good to have closure so you aren't accidentally calling that function through the whole code. //
 
 
 
@@ -28,10 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let count = 0;
+  return function update(){
+    count++;
+    }
   }
+  console.log(summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,10 +59,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(animal_name, scientific_name){
+    zooAnimals.forEach(animalNames(item){
+      console.log(item.animal_name);
+      console.log(item.scientific_name);
+    });
   }
-  
+
+  const displayNames = [];
+  console.log(animalNames);
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
