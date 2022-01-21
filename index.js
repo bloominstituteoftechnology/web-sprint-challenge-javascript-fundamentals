@@ -28,20 +28,17 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-//.reduce
-function summation(number) {
-  parseInt();
-
-let sum = 0;
-
-// looping from i = 1 to number
-// in each iteration, i is increased by 1
-for (let i = 1; i <= number; i++) {
+//
+function summation(number){
+  let sum = 0;
+  for(let i = 0; i < number + 1; i++){
     sum += i;
+  }
+  return sum;
 }
 
-  }
- 
+
+ console.log('task 2', summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -74,7 +71,7 @@ const zooAnimals = [
     });
     return displayNames;
   }
-  console.log(animalNames(zooAnimals));
+  
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -89,7 +86,7 @@ const zooAnimals = [
     });
     return lowerCase;
   }
-  console.log(lowerCaseNames(zooAnimals));
+ 
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
@@ -100,8 +97,9 @@ const zooAnimals = [
     array.filter(function(item){
       return item.population < 5;
     });
+    return array;
   }
-  console.log(lowPopulationAnimals(zooAnimals));
+ 
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -109,8 +107,11 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+    const sum = array.reduce(function(acc, item){
+      return acc + item.population;
+    }, 0);
+    return sum;
   }
   
   
@@ -122,23 +123,23 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+   return cb(a,b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(a,b){
+    return a + b;
   }
 
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(a,b){
+   return a * b;
   }
 
 
