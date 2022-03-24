@@ -99,9 +99,10 @@ const zooAnimals = [
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
   Use the higher-order function called consume to do the following:
-    1. Recieve 3 parameters: a, b and cb
-    💡 NOTE: The first two parameters (a and b) can take any argument (we can pass any value as an argument) and the last parameter (cb) accepts a callback
+    1. Recieve 3 parameters: a, b and cb. The first two parameters (a and b) can take any argument (we can pass any value as an argument) and the last parameter (cb) accepts a callback
     2. Return the invocation of cb taking a and b its arguments
+    
+    💡 NOTE: The tests for 'consume' will pass if it is created corrently and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
   */
 
   function consume(/*Your Code Here */){
