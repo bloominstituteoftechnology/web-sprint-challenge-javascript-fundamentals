@@ -113,7 +113,7 @@ const zooAnimals = [
     1. Receive 3 parameters: a, b and cb. The first two parameters (a and b) can take any argument (we can pass any value as an argument) and the last parameter (cb) accepts a callback
     2. Return the invocation of cb taking a and b its arguments
     
-    💡 NOTE: The tests for 'consume' will pass if it is created corrently and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
+    💡 NOTE: The tests for 'consume' will pass if it is created correctly and also after you correctly complete the functions 'add' and 'greeting' below in Step 2.
   */
 
   function consume(/*Your Code Here */){
@@ -164,12 +164,10 @@ function greeting(/*Your Code Here */){
 
 // 🐴🐴🐴 Topic 3: Prototypes 🐴🐴🐴 //
 
-/* ❗❗ NOTE: PLEASE READ TASK INSTRUCTIONS CAREFULLY TO KNOW WHEN TO USE AN OBJECT AS CONSTRUCTOR ARGUMENT. TESTS WILL NOT PASS IF USED WHEN NOT INSTRUCTED. ❗❗ */
-
 //🐴🐴🐴 Task: You are to build a cuboid maker that can return values for a cuboid's volume or surface area. Cuboids are similar to cubes but do not have even sides. Follow the steps in order to accomplish this challenge. 🐴🐴🐴
 
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
- Use the constructor function named CuboidMaker to do the following:
+ Use CuboidMaker to do the following:
  - Receives a single argument -- an object with the follwoing keys:
   + length
   + width
@@ -198,7 +196,7 @@ function CuboidMaker(/*Your Code Here */){
 
 
 
-/* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker (not auto tested)🐴🐴🐴
+/* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker (not auto graded)🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
