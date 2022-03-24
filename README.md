@@ -10,9 +10,9 @@ You are not allowed to collaborate during the sprint challenge.
 
 ## Introduction
 
-The index.js file contains all of your challenges. Please review it in full before answering the questions. If you complete the stretch goals please leave them in your file but commented out so that they do not affect the MVP tasks 
+The index.js file contains all of your challenges. Please review it in full before answering the questions. If you complete the stretch goals please leave them in your file but commented out so that they do not affect the MVP tasks. 
 
-In meeting the minimum viable product (MVP) specifications listed below, you should have all tests passing. You can console.log to check your work and ensure you are submitting the correct results 
+In meeting the minimum viable product (MVP) specifications listed below, you should have all tests passing. You can console.log to check your work and ensure you are submitting the correct results. 
 
 ### Commits
 
@@ -44,13 +44,13 @@ Using VSCode and Command Line:
 
 
 1. Fork the repo
-2. Go into canvas and connect your reop to codegrade
+2. Go into canvas and connect your repo to codegrade
 3. Clone your forked version of the repo
 4. DO NOT CREATE A BRANCH. You will be pushing your changes to the main/master today
 5. cd into your repo
 6. open the terminal in your vs code and type `npm install`
 7. next type `npm run test` in your terminal
-8. Complete your work making regular commits to main/ master your codegrade score will update each time you make a push.
+8. Complete your work making regular commits to main/master; your codegrade score will update each time you make a push.
 
 
 ### Testing & Debugging
@@ -76,4 +76,4 @@ In your solutions, it is essential that you follow best practices and produce cl
 
 ## Submission format
 
-Please submit your project via codegrade by following [these instructions](https://notion.so.bloomtech.BloomTech-Git-Flow-Step-by-step-269f68ae3bf64eb689a8328715a179f9) See part 2, submitting an assignment with codegrade
+Please submit your project via codegrade by following [these instructions](https://bloomtech.notion.site/bloomtech/BloomTech-Git-Flow-Step-by-step-269f68ae3bf64eb689a8328715a179f9) (see part 2, submitting an assignment with codegrade).

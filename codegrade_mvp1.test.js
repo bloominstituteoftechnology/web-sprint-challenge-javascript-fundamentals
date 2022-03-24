@@ -90,10 +90,10 @@ describe('USApop', ()=>{
 });
 
 describe('consume', ()=>{
-    it('consume returns a number or string', ()=>{
-        expect(functions.consume(2, 5, functions.add)).toBe(functions.add(2, 5));
+    it('consume returns a number', ()=>{
+        expect(functions.consume(2, 5, functions.add)).toBe(7);
     })
-    it('consume returns a number or string', ()=>{
+    it('consume returns a string', ()=>{
       expect(functions.consume('John', 'Doe', functions.greeting)).toBe(`Hello John Doe, nice to meet you!`);
   })
 });
