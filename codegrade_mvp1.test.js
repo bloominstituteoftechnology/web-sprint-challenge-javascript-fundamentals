@@ -12,14 +12,6 @@ const zooAnimals = [
     { animal_name: "Australian pelican", population: 5, scientific_name: "Pelecanus conspicillatus", state: "West Virginia" },
   ];
 
-  const add = function(num1, num2){
-      return num1 + num2;
-  }
-
-  const print = function(num1, num2){
-    return `you gave me ${num1} + ${num2}`;
-}
-
 //closures
 describe('summation', ()=>{
     it('summation returns a number', ()=>{
@@ -96,12 +88,13 @@ describe('USApop', ()=>{
         expect(functions.USApop(zooAnimals)).toEqual(56);
     })
 });
+
 describe('consume', ()=>{
     it('consume returns a number or string', ()=>{
-        expect(functions.consume(2, 5, add)).toBe(add(2, 5));
+        expect(functions.consume(2, 5, functions.add)).toBe(functions.add(2, 5));
     })
     it('consume returns a number or string', ()=>{
-      expect(functions.consume(2, 5, print)).toBe('you gave me 2 + 5');
+      expect(functions.consume('John', 'Doe', functions.greeting)).toBe(`Hello John Doe, nice to meet you!`);
   })
 });
 
@@ -122,8 +115,6 @@ describe('greeting', ()=>{
         expect(functions.greeting('Jane', 'Doe')).toBe(`Hello Jane Doe, nice to meet you!`);
     })
 });
-
-
 
 // prototypes
 describe('Instance of CuboidMaker', () => {
