@@ -23,10 +23,12 @@ myFunction();
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
-    1. Receive a number 
+    1. Receive a number as an argument passed from a parameter
     2. Use a counter to return the summation of that number. 
     
-For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
+🌟 EXAMPLE: invoking `summation(4)` should return 10 because 1+2+3+4 is 10. 
+💡 NOTE: you may use a for loop for this function if you wish 
+*/
 
 function summation(/*Your Code Here*/) {
   /*Your Code Here*/
