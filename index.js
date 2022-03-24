@@ -110,28 +110,40 @@ const zooAnimals = [
   }
  
   
-  /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
- // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
-  
+  // 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁
+
+ /*  Use add to do the following:
+ 1. Recieve two numbers as an argument that are passed in from its first and second parameters
+ 2. Return the sum of those numbers
+ */
+
 function add(/*Your Code Here */){
     /*Your Code Here*/
   }
 
 
-// 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
-  
+/* Use multiply to do the following:
+1. Recieve two numbers as an argument that are passed in from its first and second parameters
+2. Return the product of those numbers
+*/
+
 function multiply(/*Your Code Here */){
    /*Your Code Here */
   }
 
 
- // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
-  
+ /* Use greeting to do the following:
+1. Recieve two strings (a first name and last name) as an argument that are passed in from its first and second parameters
+2. Return "Hello {first-name} {last-name}, nice to meet you!"
+💡 NOTE: The string returned must match the format above or the test will not pass!
+*/
+
 function greeting(/*Your Code Here */){
    return /*Your Code Here */
   }
   
   
+
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
   // console.log(consume(2, 2, add)); // 4
