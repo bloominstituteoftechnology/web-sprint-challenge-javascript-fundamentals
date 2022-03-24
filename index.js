@@ -54,7 +54,9 @@ const zooAnimals = [
   
   /* 🦁🦁🦁 Request 1: .forEach() 🦁🦁🦁
   The zoos want to display both the scientific name and the animal name in front of the habitats. 
-  Use animalNames and return an array with only the animal name and scientific name of each animal. 
+    1. Receive the zooAnimals array as an argument passed from a parameter 
+    2. Use .forEach() to populate a new array called displayNames that will be an array of strings with only the animal name and scientific name of each animal
+    3. Return the new array
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
@@ -65,8 +67,11 @@ const zooAnimals = [
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
-  Make lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
-  🌟 EXAMPLE: ['jackal, asiatic', .....]
+  Use lowerCaseNames to do the following:
+  1. Receive the zooAnimals array as an argument passed from a parameter 
+  2. Use .map() to create a new array of strings with the animal's names in lowercase
+  3. Return the new array
+  🌟 EXAMPLE of returned array: ['jackal, asiatic', .....]
   💡 NOTE: Do some research for other methods that can help help you
   */
 
@@ -77,7 +82,10 @@ const zooAnimals = [
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
-  Make lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5 and then return this new array.
+  Use lowPopulationAnimals to do the following: 
+  1. Receive the zooAnimals array as an argument passed from a parameter 
+  2. Use .filter() to create a new array of objects which contains only the animals with a population of less than 5
+  3. Return this new array
   */
 
   function lowPopulationAnimals(/*Your Code Here*/){
@@ -87,7 +95,10 @@ const zooAnimals = [
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
-  Make USApop use the .reduce() method to find the total population from the zoosAnimals array.
+  USe USApop to do the following:
+  1. Receive the zooAnimals array as an argument passed from a parameter 
+  2. Use the .reduce() method to find the total population from the zoosAnimals array
+  3. Return the total population
   💡 NOTE: Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count. Check MDN/W3Schools for syntax!
   */
 
