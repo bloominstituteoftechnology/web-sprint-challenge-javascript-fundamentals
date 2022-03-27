@@ -63,15 +63,15 @@ const zooAnimals = [
   💡 NOTE: the array returned should be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(zooAnimals, animal_name, scientific_name){
-    const newZooAnimals = [];
-    zooAnimals.forEach((animal_name, scientific_name) => {
-      newZooAnimals.push(animal_name, scientific_name)
+  function animalNames(zooAnimals) {
+    const displayNames = [];
+    zooAnimals.forEach(function(item) {
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
     });
-   return newZooAnimals `name: ${animal_name}, scientific: ${scientific_name}`
+   return displayNames 
   }
   
-
+  
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
   Use lowerCaseNames to do the following:
@@ -82,9 +82,9 @@ const zooAnimals = [
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-  function lowerCaseNames(zooAnimals, animal_name){
-    let lowercased = zooAnimals.map(name => animal_name.toLowerCase());
-
+  function lowerCaseNames(zooAnimals){
+    let lowerCased = zooAnimals.map(zooAnimals => zooAnimals.animal_name.toLowerCase());
+      return lowerCased
 
     // const lower = zooAnimals.map(lowerCaseNames.toLowerCase)
     // return
@@ -99,12 +99,12 @@ const zooAnimals = [
   3. Return this new array
   */
 
-  function lowPopulationAnimals(zooAnimals, population){
-    const lowPop = zooAnimals.filter(checkLowPop(population));
-      function checkLowPop(population) {
-        return population < 5;
-      }
-  }
+  function lowPopulationAnimals(zooAnimals){
+    const lowPop = zooAnimals.filter(function(item){
+      return item.population <= 5
+    }) 
+      return lowPop
+  } 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
   USe USApop to do the following:
@@ -114,10 +114,11 @@ const zooAnimals = [
   💡 NOTE: Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count. Check MDN/W3Schools for syntax!
   */
 
-  function USApop(zooAnimals, accumulator, currentVal){
+  function USApop(zooAnimals){
     const totalPop = zooAnimals.reduce((accumulator, currentVal) => {
       return accumulator += currentVal.population
     }, 0);
+    return totalPop
   }
   
   
@@ -200,16 +201,17 @@ function CuboidMaker(obj) {
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   💡 NOTE: Formula for cuboid volume: length * width * height   
 */
-function volume (length, width, height){
-  CuboidMaker.prototype.volume = function (length, width, height) {
-    length * width *  height
-  }
+CuboidMaker.prototype.volume = function(){
+  return this.length * this.width * this.height
 }
+  
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
   Create another method called surfaceArea using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
   💡 NOTE: Formula for cuboid surface area: 2 * (length * width + length * height + width * height)  
 */
-
+CuboidMaker.prototype.surfaceArea = function(){
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
+}
 
 
 
@@ -231,9 +233,18 @@ function volume (length, width, height){
 //Using CuboidMakerTwo, take your prototypes from above and refactor into class syntax. Then, create an object called cuboidTwo that uses the new keyword to use our CuboidMakerTwo class.
  
 class CuboidMakerTwo{
-
+  constructor(attrs){
+    this.length = attrs.length;
+    this.width = attrs.width;
+    this.height = attrs.height;
+} 
+volume(){
+  return this.length * this.width * this.height
+  }
+  surfaceArea() {
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
+  }
 }
-
 
 
 
