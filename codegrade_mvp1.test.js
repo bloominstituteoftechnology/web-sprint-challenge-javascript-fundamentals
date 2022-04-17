@@ -57,7 +57,7 @@ describe('lowerCaseNames', ()=>{
 });
 
 describe('lowPopulationAnimals', ()=>{
-    it('animalNames returns an array', ()=>{
+    it('lowPopulationAnimals returns an array', ()=>{
         expect(functions.lowPopulationAnimals(zooAnimals)).toEqual(expect.arrayContaining(
             [
                 {
