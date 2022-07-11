@@ -14,10 +14,10 @@ const zooAnimals = [
 
 //closures
 describe('summation', ()=>{
-    it('summation returns a number', ()=>{
+    it('summation returns a number. Review for loops and how to increment values after each iteration of the for loop', ()=>{
         expect(functions.summation(4)).toBe(10);
     })
-    it('summation returns a number', ()=>{
+    it('summation returns a number. Review for loops and how to increment values after each iteration of the for loop', ()=>{
       expect(functions.summation(10)).toBe(55);
   })
 });
@@ -30,7 +30,7 @@ describe('fooFunction', ()=>{
 });
 
 describe('animalNames', ()=>{
-    it('animalNames returns an array', ()=>{
+    it('animalNames returns an array. Review the for each array method', ()=>{
         expect(functions.animalNames(zooAnimals)).toEqual(expect.arrayContaining(
             ["name: Jackal, asiatic, scientific: Canis aureus", "name: Screamer, southern, scientific: Chauna torquata", "name: White spoonbill, scientific: Platalea leucordia", "name: White-cheeked pintail, scientific: Anas bahamensis", "name: Black-backed jackal, scientific: Canis mesomelas", "name: Brolga crane, scientific: Grus rubicundus", "name: Common melba finch, scientific: Pytilia melba", "name: Pampa gray fox, scientific: Pseudalopex gymnocercus", "name: Hawk-eagle, crowned, scientific: Spizaetus coronatus", "name: Australian pelican, scientific: Pelecanus conspicillatus"]
         ));
@@ -38,7 +38,7 @@ describe('animalNames', ()=>{
 });
 
 describe('lowerCaseNames', ()=>{
-    it('lowerCaseNames returns an array', ()=>{
+    it('lowerCaseNames returns an array. Review the map array method', ()=>{
         expect(functions.lowerCaseNames(zooAnimals)).toEqual(expect.arrayContaining(
             [
                 'jackal, asiatic',
@@ -57,7 +57,7 @@ describe('lowerCaseNames', ()=>{
 });
 
 describe('lowPopulationAnimals', ()=>{
-    it('lowPopulationAnimals returns an array', ()=>{
+    it('lowPopulationAnimals returns an array. Review the filter array method', ()=>{
         expect(functions.lowPopulationAnimals(zooAnimals)).toEqual(expect.arrayContaining(
             [
                 {
@@ -84,34 +84,34 @@ describe('lowPopulationAnimals', ()=>{
 });
 
 describe('USApop', ()=>{
-    it('USApop returns a number', ()=>{
+    it('USApop returns a number. Review the reduce array method', ()=>{
         expect(functions.USApop(zooAnimals)).toEqual(56);
     })
 });
 
 describe('consume', ()=>{
-    it('consume returns a number', ()=>{
+    it('consume returns a number. Review callback functions', ()=>{
         expect(functions.consume(2, 5, functions.add)).toBe(7);
     })
-    it('consume returns a string', ()=>{
+    it('consume returns a string. Review callback functions', ()=>{
       expect(functions.consume('John', 'Doe', functions.greeting)).toBe(`Hello John Doe, nice to meet you!`);
   })
 });
 
 describe('add', ()=>{
-    it('add returns a number', ()=>{
+    it('add returns a number. Review callback functions and math operations', ()=>{
         expect(functions.add(2,5)).toBe(7);
     })
 });
 
 describe('multiply', ()=>{
-    it('multiply returns a number', ()=>{
+    it('multiply returns a number. Review callback functions and math operations', ()=>{
         expect(functions.multiply(2,5)).toBe(10);
     })
 });
 
 describe('greeting', ()=>{
-    it('greeting returns a string', ()=>{
+    it('greeting returns a string. Review Template literals', ()=>{
         expect(functions.greeting('Jane', 'Doe')).toBe(`Hello Jane Doe, nice to meet you!`);
     })
 });
@@ -126,7 +126,7 @@ describe('Instance of CuboidMaker', () => {
         height:5,
       })
     })
-    it('[1] initializes with length', () => {
+    it('[1] initializes with length.', () => {
         console.log(cuboid);
       expect(cuboid.length).toBe(4)
     })
