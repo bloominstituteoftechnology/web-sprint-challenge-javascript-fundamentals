@@ -25,14 +25,29 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
+<!-- '.map' creates a new array by transforming every element in an array individually. You would use '.map' if you have an array of objects and you want to create a new array with specific keys from those objects
+
+ '.filter' creates a new array by removing elements that don't belong. '.filter' is used when you want to create a new array with only some of the objects in the original array.
+ 
+ '.reduce' takes all of the elements in an array and reduces them into a single value. '.reduce' is used to generate a single vaule or object from an array. -->
 
 2. Explain the difference between a callback and a higher order function.
+<!-- A callback is what is passed into a function. A higher order function recieves a function as a parameter or argument. -->
 
 3. Explain what a closure is.
+<!-- a closure gives you access to an outer function's scope from an inner function -->
 
 4. Describe the four principles of the 'this' keyword.
+<!-- Window binding: if we haven't given 'this' any context it will return the window, the global object in node or undefined in strict mode.
+
+Implicit binding: Applies to objects with methods. When the function is invoked, whatever is left of the dot, that's what 'this' refers to.
+
+Explicit binding: we tell a function what the 'this' keyword should be using .call, .apply or .bind. 
+
+New binding: When a function is invoked with a new keyword, 'this' is bound to the new object being constructed. When a function is invoked as a constructor function using the new keyword, this points to the new object that’s created  -->
 
 5. Why do we need super() in an extended class?
+<!-- The extends will inherit parent properties and will abstract away call() function. The super()function will inherit parent method to child and  will not ever need it to bind. Also abstract away any of syntax that we have using to being our objectS prototype. -->
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
