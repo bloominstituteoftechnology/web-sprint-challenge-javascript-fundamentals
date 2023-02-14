@@ -27,8 +27,13 @@ function myFunction() {
 💡 NOTE: you may use a for loop for this function if you wish 
 */
 
-function summation(/*Your Code Here*/) {
+function summation(num) {
   /*Your Code Here*/
+  if (num === 1) {
+    return 1;
+  } else {
+    return num + summation(num - 1);
+  }
 }
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
