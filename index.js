@@ -133,8 +133,12 @@ console.log(animalNames(zooAnimals));
   💡 NOTE: Do some research for other methods that can help help you
   */
 
-function lowerCaseNames(/*Your Code Here*/) {
+function lowerCaseNames(arr) {
   /*Your Code Here*/
+  const lowerCaseAnimals = arr.map((animal) => {
+    return animal.animal_name.toLowerCase();
+  });
+  return lowerCaseAnimals;
 }
 
 /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
