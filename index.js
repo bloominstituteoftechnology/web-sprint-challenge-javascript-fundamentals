@@ -149,8 +149,12 @@ function lowerCaseNames(arr) {
   3. Return this new array
   */
 
-function lowPopulationAnimals(/*Your Code Here*/) {
+function lowPopulationAnimals(arr) {
   /*Your Code Here*/
+  const lowCount = arr.filter((animal) => {
+    return animal.population < 5;
+  });
+  return lowCount;
 }
 
 /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
