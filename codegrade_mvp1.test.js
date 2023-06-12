@@ -58,7 +58,7 @@ describe('lowerCaseNames', ()=>{
 
 describe('lowPopulationAnimals', ()=>{
     it('lowPopulationAnimals returns an array. Review the filter array method', ()=>{
-        expect(functions.lowPopulationAnimals(zooAnimals)).toEqual(expect.arrayContaining(
+        expect(functions.lowPopulationAnimals(zooAnimals)).toEqual(
             [
                 {
                   animal_name: 'Screamer, southern',
@@ -79,7 +79,7 @@ describe('lowPopulationAnimals', ()=>{
                   state: 'Washington'
                 }
               ]
-        ));
+        );
     })
 });
 
@@ -122,7 +122,7 @@ describe('Instance of CuboidMaker', () => {
     beforeEach(() => {
       cuboid = new functions.CuboidMaker({
         length: 4,
-        width: 5, 
+        width: 5,
         height:5,
       })
     })
@@ -158,7 +158,7 @@ describe('Instance of CuboidMakerTwo', () => {
     beforeEach(() => {
       cuboidTwo = new functions.CuboidMakerTwo({
         length: 4,
-        width: 5, 
+        width: 5,
         height:5,
       })
     })
